@@ -9,8 +9,18 @@
 
   </head>
   <body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col">
-	<div class="flex flex-1">
-	  <aside class="w-64 p-4 flex flex-col gap-1 sticky self-start top-0 overflow-y-auto border-r border-zinc-800 min-h-screen">
+
+  <div class="flex flex-1">
+     <aside class="
+  fixed md:sticky top-0 md:top-0 left-0 z-40
+  w-64 h-screen
+  p-4 flex flex-col gap-1 overflow-y-auto
+  border-r border-zinc-800
+  bg-zinc-950
+  -translate-x-full peer-checked:translate-x-0 md:translate-x-0
+  transition-transform duration-200
+  self-start
+">
   <details class="group">
 	<summary class="flex items-center gap-1 cursor-pointer text-zinc-300 hover:text-zinc-100 py-1 list-none">
 	  <i class="ti ti-chevron-right text-xs transition-transform group-open:rotate-90"></i>
@@ -42,12 +52,17 @@
   </details>
 </aside>
 
+	 <label for="sidebar-toggle" class="md:hidden px-3 cursor-pointer text-zinc-100"> 
+	   <i class="ti ti-menu-2 text-xl"></i>
+	 </label>
 	  <div class="flex-1 flex flex-col">
 		<div class="flex justify-center">
 		  <nav class="flex items-center justify-between border-l border-r border-b border-zinc-800 gap-1 w-full max-w-4xl">
-  <a href="/" class="px-2 md:px-4 py-2 md:py-4 text-lg font-semibold text-zinc-100 hover:text-zinc-400 transition-colors">
-	/home/eto/
-  </a>
+  <div class="flex items-center">
+    <a href="/" class="px-2 md:px-4 py-2 md:py-4 text-lg font-semibold text-zinc-100 hover:text-zinc-400 transition-colors">
+      /home/eto/
+    </a>
+  </div>
   <a href="mailto:batistaq@proton.me" class="px-2 md:px-4 py-2 md:py-4 text-right text-zinc-400 hover:text-zinc-100 italic transition-colors">
 	batistaq@proton.me
   </a>
@@ -55,7 +70,7 @@
 </nav>
 
 		</div>
-	  <main class="p-8 max-w-4xl mx-auto px-4 py-8">
+		<main class="p-8 max-w-4xl mx-auto px-4 py-8">
 		<h1 class="text-center text-2xl md:text-3xl font-bold mb-4">Welcome!</h1>
 		<p class="text-zinc-400 py-4 md:py-6">
 			So, hey! My name is <b><u>eto</u></b>.<br><br>
