@@ -2,20 +2,61 @@
 <html lang="en">
   <head>
 	<meta charset="UTF-8">
-	<title>~/the index</title>
-	<link rel="stylesheet" href="static/css/output.css">
+	<title>/home/eto/index.html</title>
+	<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+	<link rel="stylesheet" href="/static/css/output.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 
   </head>
   <body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col">
-	<nav class="flex items-center justify-between">
-	<a href="/" class="px-4 py-2 md:px-6 md:py-4 text-center text-lg font-semibold">/index</a> <!--index page i suppose this is-->
+	<div class="flex flex-1">
+	  <aside class="w-64 p-4 flex flex-col gap-1 sticky self-start top-0 overflow-y-auto border-r border-zinc-800 min-h-screen">
+  <details class="group">
+	<summary class="flex items-center gap-1 cursor-pointer text-zinc-300 hover:text-zinc-100 py-1 list-none">
+	  <i class="ti ti-chevron-right text-xs transition-transform group-open:rotate-90"></i>
+	  blog
+	</summary>
+	<ul class="pl-5 flex flex-col gap-1 mt-1">
+	  <li><a href="/blog" class="text-zinc-400 hover:text-zinc-100 text-sm">index</a></li>
+	</ul>
+  </details>
+
+  <details class="group">
+	<summary class="flex items-center gap-1 cursor-pointer text-zinc-300 hover:text-zinc-100 py-1 list-none">
+	  <i class="ti ti-chevron-right text-xs transition-transform group-open:rotate-90"></i>
+	  projects
+	</summary>
+	<ul class="pl-5 flex flex-col gap-1 mt-1">
+	  <li><a href="/projects" class="text-zinc-400 hover:text-zinc-100 text-sm">all</a></li>
+	</ul>
+  </details>
+
+  <details class="group">
+	<summary class="flex items-center gap-1 cursor-pointer text-zinc-300 hover:text-zinc-100 py-1 list-none">
+	  <i class="ti ti-chevron-right text-xs transition-transform group-open:rotate-90"></i>
+	  homelab
+	</summary>
+	<ul class="pl-5 flex flex-col gap-1 mt-1">
+	  <li><a href="/homelab" class="text-zinc-400 hover:text-zinc-100 text-sm">main</a></li>
+	</ul>
+  </details>
+</aside>
+
+	  <div class="flex-1 flex flex-col">
+		<div class="flex justify-center">
+		  <nav class="flex items-center justify-between border-l border-r border-b border-zinc-800 gap-1 w-full max-w-4xl">
+  <a href="/" class="px-2 md:px-4 py-2 md:py-4 text-lg font-semibold text-zinc-100 hover:text-zinc-400 transition-colors">
+	/home/eto/
+  </a>
+  <a href="mailto:batistaq@proton.me" class="px-2 md:px-4 py-2 md:py-4 text-right text-zinc-400 hover:text-zinc-100 italic transition-colors">
+	batistaq@proton.me
+  </a>
+  <!--flag{not_quite_it}-->
 </nav>
 
-	
-	<div class="flex-1">
-		<main class="max-w-4xl mx-auto px-4 py-8">
-		<h1 class="text-center text-2xl md:text-3xl font-bold mb-4">You're on the index page!</h1>
+		</div>
+	  <main class="p-8 max-w-4xl mx-auto px-4 py-8">
+		<h1 class="text-center text-2xl md:text-3xl font-bold mb-4">Welcome!</h1>
 		<p class="text-zinc-400 py-4 md:py-6">
 			So, hey! My name is <b><u>eto</u></b>.<br><br>
 			Your presence here means that you somehow found this website on the depths of the internet. Thank you! :3 <br>
@@ -35,7 +76,6 @@
 			</p>
 			</blockquote>
 		</p>
-		</main>
 
 		<div class="flex gap-5 mt-4 justify-center">
 		<ul class="flex flex-wrap text-center items-center gap-y-2 gap-x-8">
@@ -152,23 +192,12 @@
 
 		<div class="max-w-4xl mx-auto px-4 mt-4 md:mt-4">
 		  <div class="flex flex-col gap-1">
-			<div class="flex gap-2">
-				<a href="/projects" class="text-zinc-100 hover:text-zinc-400 transition-colors"><u>/projects</u></a>
-				<span class="text-zinc-400">-> my other projects</span>
-				</div>
-			<div class="flex gap-2">
-				<a href="/homelab" class="text-zinc-100 hover:text-zinc-400 transition-colors"><u>/homelab</u></a>
-				<span class="text-zinc-400">-> homelab setup</span>
-			</div>
-			<div class="flex gap-2">
-				<a href="/blog" class="text-zinc-100 hover:text-zinc-400 transition-colors"><u>/blog</u></a>
-				<span class="text-zinc-400">-> professional thoughts</span>
-			</div>
-			</div>
+			There have a lot of stuff lately going on in my life. Studies, things that could change my life to a better way, etc. I mean more important than these projects. So, in coming months I won't be as active as before. ://
+		  </div>
 		</div>
-	</div>
-	<footer class="gap-x-4 md:gap-x-8 gap-y-2 md:px-6 md:py-6 px-4 py-4">
-  <div class="max-w-4xl mx-auto flex items-center justify-between">
+
+		<footer class="md:px-6 md:py-6 px-4 py-4">
+  <div class="max-w-4xl mx-auto px-4 flex items-center justify-between">
 	<span class="text-zinc-400">
 	  Made with ♥️ and a lot of chaos
 	</span>
@@ -178,6 +207,9 @@
   </div>
 </footer>
 
+	  </main>
+	  </div>
+	</div>
 	
   </body>
 </html>
