@@ -9,14 +9,26 @@
   </head>
   <body class="bg-zinc-950 text-zinc-400 min-h-screen flex flex-col">
 	<div class="flex flex-1">
-	  <aside class="w-64 p-4 flex flex-col gap-1 sticky self-start top-0 overflow-y-auto border-r border-zinc-800 min-h-screen">
+	  <aside class="
+  fixed md:sticky top-0 md:top-0 left-0 z-40
+  w-64 h-screen
+  p-4 flex flex-col gap-1 overflow-y-auto
+  border-r border-zinc-800
+  bg-zinc-950
+  -translate-x-full peer-checked:translate-x-0 md:translate-x-0
+  transition-transform duration-200
+  self-start
+">
   <details class="group">
 	<summary class="flex items-center gap-1 cursor-pointer text-zinc-300 hover:text-zinc-100 py-1 list-none">
 	  <i class="ti ti-chevron-right text-xs transition-transform group-open:rotate-90"></i>
 	  blog
 	</summary>
 	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/blog" class="text-zinc-400 hover:text-zinc-100 text-sm">index</a></li>
+	  <li><a href="/blog/main.html" class="text-zinc-400 hover:text-zinc-100 text-sm">index</a></li>
+	</ul>
+	<ul class="pl-5 flex flex-col gap-1 mt-1">
+	  <li><a href="/blog/extreme-privacy.html" class="text-zinc-400 hover:text-zinc-100 text-sm">extreme privacy</a></li>
 	</ul>
   </details>
 
@@ -26,7 +38,7 @@
 	  projects
 	</summary>
 	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/projects" class="text-zinc-400 hover:text-zinc-100 text-sm">all</a></li>
+	  <li><a href="/projects.html" class="text-zinc-400 hover:text-zinc-100 text-sm">all</a></li>
 	</ul>
   </details>
 
@@ -36,7 +48,7 @@
 	  homelab
 	</summary>
 	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/homelab" class="text-zinc-400 hover:text-zinc-100 text-sm">main</a></li>
+	  <li><a href="/homelab.html" class="text-zinc-400 hover:text-zinc-100 text-sm">main</a></li>
 	</ul>
   </details>
 </aside>
@@ -44,9 +56,11 @@
 	  <div class="flex-1 flex flex-col">
 		<div class="flex justify-center">
 		  <nav class="flex items-center justify-between border-l border-r border-b border-zinc-800 gap-1 w-full max-w-4xl">
-  <a href="/" class="px-2 md:px-4 py-2 md:py-4 text-lg font-semibold text-zinc-100 hover:text-zinc-400 transition-colors">
-	/home/eto/
-  </a>
+  <div class="flex items-center">
+    <a href="/" class="px-2 md:px-4 py-2 md:py-4 text-lg font-semibold text-zinc-100 hover:text-zinc-400 transition-colors">
+      /home/eto/
+    </a>
+  </div>
   <a href="mailto:batistaq@proton.me" class="px-2 md:px-4 py-2 md:py-4 text-right text-zinc-400 hover:text-zinc-100 italic transition-colors">
 	batistaq@proton.me
   </a>
