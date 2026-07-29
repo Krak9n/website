@@ -8,9 +8,14 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 
   </head>
-  <body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col">
-
+  <body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col text-base md:text-sm">
+	<input type="checkbox" id="sidebar-toggle" class="peer hidden"> <!--sheisse-->
+	
   <div class="flex flex-1">
+    <label for="sidebar-toggle"
+      class="fixed inset-0 bg-black/50 z-30 hidden peer-checked:block md:hidden">
+    </label> <!--the button that i hate implementing-->
+
      <aside class="
   fixed md:sticky top-0 md:top-0 left-0 z-40
   w-64 h-screen
@@ -20,6 +25,7 @@
   -translate-x-full peer-checked:translate-x-0 md:translate-x-0
   transition-transform duration-200
   self-start
+  text-base
 ">
   <details class="group">
 	<summary class="flex items-center gap-1 cursor-pointer text-zinc-300 hover:text-zinc-100 py-1 list-none">
@@ -30,7 +36,7 @@
 	  <li><a href="/blog/main.html" class="text-zinc-400 hover:text-zinc-100 text-sm">index</a></li>
 	</ul>
 	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/blog/extreme-privacy.html" class="text-zinc-400 hover:text-zinc-100 text-sm">extreme privacy</a></li> 
+	  <li><a href="/blog/extreme-privacy.html" class="text-zinc-400 hover:text-zinc-100 text-sm">extreme privacy</a></li>
 	</ul>
   </details>
 
@@ -59,21 +65,26 @@
 	   <i class="ti ti-menu-2 text-xl"></i>
 	 </label>
 	  <div class="flex-1 flex flex-col">
-		<div class="flex justify-center">
+		<div class="flex justify-center sticky top-0 z-20 bg-zinc-950 md:static">
 		  <nav class="flex items-center justify-between border-l border-r border-b border-zinc-800 gap-1 w-full max-w-4xl">
   <div class="flex items-center">
     <a href="/" class="px-2 md:px-4 py-2 md:py-4 text-lg font-semibold text-zinc-100 hover:text-zinc-400 transition-colors">
       /home/eto/
     </a>
   </div>
-  <a href="mailto:batistaq@proton.me" class="px-2 md:px-4 py-2 md:py-4 text-right text-zinc-400 hover:text-zinc-100 italic transition-colors">
-	batistaq@proton.me
-  </a>
+  <div class="flex items-center gap-2">
+	<a href="mailto:batistaq@proton.me" class="px-2 md:px-4 py-2 md:py-4 text-right text-zinc-400 hover:text-zinc-100 italic transition-colors hidden sm:block">
+	  batistaq@proton.me
+	</a>
+    <label for="sidebar-toggle" class="md:hidden px-3 py-2 cursor-pointer text-zinc-100">
+      <i class="ti ti-menu-2 text-2xl"></i>
+    </label>
+  </div>
   <!--flag{not_quite_it}-->
 </nav>
 
 		</div>
-		<main class="p-8 max-w-4xl mx-auto px-4 py-8">
+		<main class="p-8 max-w-4xl mx-auto px-4 py-8 text-base md:text-base">
 		<h1 class="text-center text-2xl md:text-3xl font-bold mb-4">Welcome!</h1>
 		<p class="text-zinc-400 py-4 md:py-6">
 			So, hey! My name is <b><u>eto</u></b>.<br><br>
