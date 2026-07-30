@@ -3,65 +3,64 @@
   <head>
 	<meta charset="UTF-8">
 	<title>/home/eto/index.html</title>
+	<meta name="author" content="eto, batistaq@proton.me">
 	<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
 	<link rel="stylesheet" href="/static/css/output.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 
   </head>
-  <body class="bg-zinc-950 text-zinc-100 flex flex-col text-lg md:text-base">
+  <body class="bg-zinc-950 text-zinc-100 flex flex-col">
 	<div class="flex flex-1">
-	  <input type="checkbox" id="sidebar-toggle" class="peer hidden">
-	  
-	  <label for="sidebar-toggle" class="md:hidden fixed top-4 right-4 z-50 p-2 bg-zinc-900 border border-zinc-800 cursor-pointer text-zinc-100">
-		<i class="ti ti-menu-2 text-2xl"></i>
-	  </label>
-	
-     <aside class="
-  fixed md:sticky top-0 md:top-0 left-0 z-40
-  w-64 h-screen
-  p-4 flex flex-col gap-1 overflow-y-auto
-  border-r border-zinc-800
-  bg-zinc-950
-  -translate-x-full peer-checked:translate-x-0 md:translate-x-0
-  transition-transform duration-200
-  self-start
-  text-base
-">
-  <details class="group">
-	<summary class="flex items-center gap-1 cursor-pointer text-zinc-300 hover:text-zinc-100 py-1 list-none">
-	  <i class="ti ti-chevron-right text-xs transition-transform group-open:rotate-90"></i>
-	  blog
-	</summary>
-	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/blog" class="text-zinc-400 hover:text-zinc-100 text-sm">index</a></li>
-	</ul>
-	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/blog/extreme-privacy" class="text-zinc-400 hover:text-zinc-100 text-sm">extreme privacy</a></li>
-	</ul>
-  </details>
 
+     <aside id="sidebar"
+  class="
+    fixed md:sticky top-0 left-0 z-40
+    w-64 h-screen
+    p-4 flex flex-col gap-1 overflow-y-auto
+    border-r border-zinc-800
+    bg-zinc-950
+    -translate-x-full md:translate-x-0
+    transition-transform duration-200
+    self-start
+  ">
   <details class="group">
-	<summary class="flex items-center gap-1 cursor-pointer text-zinc-300 hover:text-zinc-100 py-1 list-none">
-	  <i class="ti ti-chevron-right text-xs transition-transform group-open:rotate-90"></i>
-	  projects
-	</summary>
-	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/projects" class="text-zinc-400 hover:text-zinc-100 text-sm">all</a></li>
-	</ul>
+    <summary class="flex items-center gap-1 cursor-pointer text-zinc-300 hover:text-zinc-100 py-1 list-none">
+      <i class="ti ti-chevron-right text-xs transition-transform group-open:rotate-90"></i>
+      blog
+    </summary>
+    <ul class="pl-5 flex flex-col gap-1 mt-1">
+      <li><a href="/blog" class="text-zinc-400 hover:text-zinc-100 text-base md:text-sm">index</a></li>
+      <li><a href="/blog/extreme-privacy" class="text-zinc-400 hover:text-zinc-100 text-base md:text-sm">extreme privacy</a></li>
+    </ul>
   </details>
-
   <details class="group">
-	<summary class="flex items-center gap-1 cursor-pointer text-zinc-300 hover:text-zinc-100 py-1 list-none">
-	  <i class="ti ti-chevron-right text-xs transition-transform group-open:rotate-90"></i>
-	  homelab
-	</summary>
-	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/homelab" class="text-zinc-400 hover:text-zinc-100 text-sm">main</a></li>
-	</ul>
+    <summary class="flex items-center gap-1 cursor-pointer text-zinc-300 hover:text-zinc-100 py-1 list-none">
+      <i class="ti ti-chevron-right text-xs transition-transform group-open:rotate-90"></i>
+      projects
+    </summary>
+    <ul class="pl-5 flex flex-col gap-1 mt-1">
+      <li><a href="/projects" class="text-zinc-400 hover:text-zinc-100 text-base md:text-sm">all</a></li>
+    </ul>
+  </details>
+  <details class="group">
+    <summary class="flex items-center gap-1 cursor-pointer text-zinc-300 hover:text-zinc-100 py-1 list-none">
+      <i class="ti ti-chevron-right text-xs transition-transform group-open:rotate-90"></i>
+      homelab
+    </summary>
+    <ul class="pl-5 flex flex-col gap-1 mt-1">
+      <li><a href="/homelab" class="text-zinc-400 hover:text-zinc-100 text-base md:text-sm">main</a></li>
+    </ul>
   </details>
 </aside>
 
+<div id="sidebar-overlay"
+  onclick="document.getElementById('sidebar').classList.add('-translate-x-full'); this.classList.add('hidden');"
+  class="fixed inset-0 bg-black/50 z-30 hidden md:hidden">
+</div>
+
+
 	  <div class="flex-1 flex flex-col">
+		
 		<div class="flex justify-center sticky top-0 z-20 bg-zinc-950 md:static">
 		  <nav class="flex items-center justify-between border-l border-r border-b border-zinc-800 gap-1 w-full max-w-4xl">
   <a href="/" class="px-2 md:px-4 py-2 md:py-4 text-lg font-semibold text-zinc-100 hover:text-zinc-400 transition-colors">
@@ -72,8 +71,15 @@
   </a>
 </nav>
 
+<button
+  onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full'); document.getElementById('sidebar-overlay').classList.toggle('hidden');"
+  class="md:hidden fixed top-4 right-4 z-50 p-2 bg-zinc-900 border border-zinc-800 rounded-md text-zinc-100">
+  <i class="ti ti-menu-2 text-2xl"></i>
+</button>
+
 		</div>
-		<main class="p-8 max-w-4xl mx-auto px-4 py-8">
+		
+		<main class="p-8 max-w-4xl mx-auto px-4 py-8 text-lg md:text-base">
 		  <h1 class="text-2xl md:text-3xl font-bold mb-4">Welcome!</h1>
 		  <p class="text-zinc-400 py-4 md:py-6">
 			I'm <b class="underline">eto</b> (he/they)! Mainly a <u>paranoid programmer</u>, secondly an inspiring <u>systems administrator</u>. However, I am better known as someone with way too many interests. :3<br><br>
