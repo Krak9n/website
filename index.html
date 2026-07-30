@@ -4,17 +4,19 @@
 	<meta charset="UTF-8">
 	<title>/home/eto/index.html</title>
 	<meta name="author" content="eto, batistaq@proton.me">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
 	<link rel="stylesheet" href="/static/css/output.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
 
   </head>
   <body class="bg-zinc-950 text-zinc-100 flex flex-col">
-	<div class="flex flex-1">
+	<div class="min-h-screen flex">
 
      <aside id="sidebar"
   class="
-    fixed md:sticky top-0 left-0 z-40
+	hidden md:sticky md:relative md:block
+	top-0 left-0 z-40
     w-64 h-screen
     p-4 flex flex-col gap-1 overflow-y-auto
     border-r border-zinc-800
@@ -87,6 +89,7 @@
 			<br><br>
 			This website has just been recently created. And so it will grow over time, its structure won't be consistent, it may break, or it will just work. Who knows?
 			<br>
+		</p>
 
 			<div class="text-zinc-400">
 			  Email me your ideas, <i>if you have any</i>: <a href="mailto:batistaq@proton.me" class="underline text-zinc-400 hover:text-zinc-100 transition-colors">batistaq@proton.me</a>
@@ -103,7 +106,6 @@
 				</a>
 			</p>
 			</blockquote>
-		</p>
 
 		<div class="flex gap-5 mt-4 justify-center">
 		<ul class="flex flex-wrap text-center items-center gap-y-2 gap-x-8">
