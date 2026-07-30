@@ -499,6 +499,11 @@
       }
     }
   }
+  .sm\:block {
+    @media (width >= 40rem) {
+      display: block;
+    }
+  }
   .md\:sticky {
     @media (width >= 48rem) {
       position: sticky;
@@ -587,12 +592,10 @@ body {
 }
 .marquee {
   overflow: hidden;
-  width: 100%;
   mask-image: linear-gradient (	to-right,	transparent 0%,	black 15%,	black 85%,	transparent 100%	);
 }
 .marquee-track {
   display: flex;
-  width: max-content;
   will-change: transform;
   animation: marquee 35s linear infinite;
 }
