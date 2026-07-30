@@ -517,6 +517,13 @@
       }
     }
   }
+  .hover\:text-zinc-300 {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-zinc-300);
+      }
+    }
+  }
   .hover\:text-zinc-400 {
     &:hover {
       @media (hover: hover) {
