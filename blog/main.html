@@ -3,28 +3,23 @@
   <head>
 	<meta charset="UTF-8">
 	<title>/home/eto/blog/main.html</title>
+	<meta name="author" content="eto, batistaq@proton.me">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
 	<link rel="stylesheet" href="/static/css/output.css">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   </head>
   <body class="bg-zinc-950 text-zinc-400 min-h-screen flex flex-col text-lg md:text-base">
 	<div class="flex flex-1">
-	  <input type="checkbox" id="sidebar-toggle" class="peer hidden">
-	  
-	  <label for="sidebar-toggle" class="md:hidden fixed top-4 right-4 z-50 p-2 bg-zinc-900 border border-zinc-800 cursor-pointer text-zinc-100">
-		<i class="ti ti-menu-2 text-2xl"></i>
-	  </label>
-	
-	  <aside class="
-  fixed md:sticky top-0 md:top-0 left-0 z-40
-  w-64 h-screen
-  p-4 flex flex-col gap-1 overflow-y-auto
-  border-r border-zinc-800
-  bg-zinc-950
-  -translate-x-full peer-checked:translate-x-0 md:translate-x-0
+
+	  <!--i hate css-->
+
+<aside class="
+  fixed md:sticky top-0 left-0 z-40
+  w-64 h-screen p-4 flex flex-col gap-1 overflow-y-auto
+  border-r border-zinc-800 bg-zinc-950
+  -translate-x-full peer-checked/menu:translate-x-0 md:translate-x-0
   transition-transform duration-200
-  self-start
-  text-base
 ">
   <details class="group">
 	<summary class="flex items-center gap-1 cursor-pointer text-zinc-300 hover:text-zinc-100 py-1 list-none">
@@ -32,20 +27,10 @@
 	  blog
 	</summary>
 	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/blog" class="text-zinc-400 hover:text-zinc-100 text-sm">index</a></li>
+	  <li><a href="/blog/main.html" class="text-zinc-400 hover:text-zinc-100 text-sm">Main</a></li>
 	</ul>
 	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/blog/extreme-privacy" class="text-zinc-400 hover:text-zinc-100 text-sm">extreme privacy</a></li>
-	</ul>
-  </details>
-
-  <details class="group">
-	<summary class="flex items-center gap-1 cursor-pointer text-zinc-300 hover:text-zinc-100 py-1 list-none">
-	  <i class="ti ti-chevron-right text-xs transition-transform group-open:rotate-90"></i>
-	  projects
-	</summary>
-	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/projects" class="text-zinc-400 hover:text-zinc-100 text-sm">all</a></li>
+	  <li><a href="/blog/extreme-privacy.html" class="text-zinc-400 hover:text-zinc-100 text-sm">Extreme Privacy, or stay like everyone else?</a></li>
 	</ul>
   </details>
 
@@ -55,13 +40,21 @@
 	  homelab
 	</summary>
 	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/homelab" class="text-zinc-400 hover:text-zinc-100 text-sm">main</a></li>
+	  <li><a href="/homelab.html" class="text-zinc-400 hover:text-zinc-100 text-sm">Main</a></li>
 	</ul>
   </details>
+
+  <ul class="pl-4 flex flex-col">
+	<li>
+	  <a href="/projects.html" class="text-zinc-300 hover:text-zinc-100 ">projects</a>
+	</li>
+  </ul>
+
 </aside>
 
+
 	  <div class="flex-1 flex flex-col">
-		<div class="flex justify-center">
+		<div class="flex justify-center sticky top-0 z-20">
 		  <nav class="flex items-center justify-between border-l border-r border-b border-zinc-800 gap-1 w-full max-w-4xl">
   <a href="/" class="px-2 md:px-4 py-2 md:py-4 text-lg font-semibold text-zinc-100 hover:text-zinc-400 transition-colors">
     /home/eto/
@@ -75,7 +68,7 @@
 		<div class="flex-1 max-w-4xl mx-auto px-5 py-8 w-full">
 		  <p>
 			<span class="text-zinc-500">2026.07.29:</span>
-			<a href="/blog/extreme-privacy" class="text-center text-zinc-300 hover:text-zinc-100 transition-colors font-bold">
+			<a href="/blog/extreme-privacy.html" class="text-center text-zinc-300 hover:text-zinc-100 transition-colors font-bold">
 			  Extreme Privacy, or stay like everyone else?
 			</a>
 		  </p>

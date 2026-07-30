@@ -15,14 +15,6 @@
 
       <!--i hate css-->
 
-<input type="checkbox" id="menu-toggle" class="hidden peer/menu">
-
-<label for="menu-toggle" class="md:hidden fixed top-3 right-3 z-50 p-2 bg-zinc-900 border border-zinc-800 rounded-md text-zinc-100 cursor-pointer">
-  <i class="ti ti-menu-2 text-2xl"></i>
-</label>
-
-<label for="menu-toggle" class="fixed inset-0 bg-black/60 z-30 hidden peer-checked/menu:block md:hidden"></label>
-
 <aside class="
   fixed md:sticky top-0 left-0 z-40
   w-64 h-screen p-4 flex flex-col gap-1 overflow-y-auto
@@ -36,20 +28,10 @@
 	  blog
 	</summary>
 	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/blog" class="text-zinc-400 hover:text-zinc-100 text-sm">index</a></li>
+	  <li><a href="/blog/main.html" class="text-zinc-400 hover:text-zinc-100 text-sm">Main</a></li>
 	</ul>
 	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/blog/extreme-privacy" class="text-zinc-400 hover:text-zinc-100 text-sm">extreme privacy</a></li>
-	</ul>
-  </details>
-
-  <details class="group">
-	<summary class="flex items-center gap-1 cursor-pointer text-zinc-300 hover:text-zinc-100 py-1 list-none">
-	  <i class="ti ti-chevron-right text-xs transition-transform group-open:rotate-90"></i>
-	  projects
-	</summary>
-	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/projects" class="text-zinc-400 hover:text-zinc-100 text-sm">all</a></li>
+	  <li><a href="/blog/extreme-privacy.html" class="text-zinc-400 hover:text-zinc-100 text-sm">Extreme Privacy, or stay like everyone else?</a></li>
 	</ul>
   </details>
 
@@ -59,9 +41,16 @@
 	  homelab
 	</summary>
 	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/homelab" class="text-zinc-400 hover:text-zinc-100 text-sm">main</a></li>
+	  <li><a href="/homelab.html" class="text-zinc-400 hover:text-zinc-100 text-sm">Main</a></li>
 	</ul>
   </details>
+
+  <ul class="pl-4 flex flex-col">
+	<li>
+	  <a href="/projects.html" class="text-zinc-300 hover:text-zinc-100 ">projects</a>
+	</li>
+  </ul>
+
 </aside>
 
 
@@ -76,12 +65,6 @@
     batistaq@proton.me
   </a>
 </nav>
-
-<button
-  onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full'); document.getElementById('sidebar-overlay').classList.toggle('hidden');"
-  class="md:hidden fixed top-4 right-4 z-50 p-2 bg-zinc-900 border border-zinc-800 rounded-md text-zinc-100">
-  <i class="ti ti-menu-2 text-2xl"></i>
-</button>
 
 		</div>
 		
@@ -118,7 +101,7 @@
 			</a>
 			</li>
 			<li>
-			<a href="/resume" class="flex items-center gap-1.5 text-zinc-400 hover:text-zinc-100 transition-colors" rel="noopener noreferrer">
+			<a href="/static/files/cv.pdf" class="flex items-center gap-1.5 text-zinc-400 hover:text-zinc-100 transition-colors" rel="noopener noreferrer">
 				<b><u>cv</u></b>
 			</a>
 			</li>
@@ -136,60 +119,60 @@
 				<!-- hide overflow -->
 				<div class="marquee-group flex items-center justify-center gap-4 pr-4">
 				<a href="https://gnu.org" target="_blank" rel="noopener noreferrer">
-					<img src="../static/badges/gnubanner.gif" alt="GNU">
+					<img src="/static/badges/gnubanner.gif" alt="GNU">
 				</a>
 				<a href="">
-					<img src="../static/badges/hope.gif" alt="lost hope">
+					<img src="/static/badges/hope.gif" alt="lost hope">
 				</a>
 				<a href="https://kernel.org">
-					<img src="../static/badges/gnu-linux.gif" alt="GET LINUX">
+					<img src="/static/badges/gnu-linux.gif" alt="GET LINUX">
 				</a>
 				<a href="https://archlinux.org">
-					<img src="../static/badges/arch.gif" alt="arch linux">
+					<img src="/static/badges/arch.gif" alt="arch linux">
 				</a>
 				<a href="">
-					<img src="../static/badges/queerpride.gif" alt="pride">
+					<img src="/static/badges/queerpride.gif" alt="pride">
 				</a>
 				<a href="https://github.com/Krak9n/">
-					<img src="../static/badges/github-check.gif" alt="my gh">
+					<img src="/static/badges/github-check.gif" alt="my gh">
 				</a>
 				<a>
-					<img src="../static/badges/say-no-to-web3.gif">
+					<img src="/static/badges/say-no-to-web3.gif">
 				</a>
 				<a href="https://github.com/id-Software/DOOM">
-					<img src="../static/badges/doomrl.gif">
+					<img src="/static/badges/doomrl.gif">
 				</a>
 				<a href="https://discord.gg/B6kgfrAfwF">
-					<img src="../static/badges/discordserver.gif">
+					<img src="/static/badges/discordserver.gif">
 				</a>
 				</div>
 				<div class="marquee-group flex items-center gap-4 pr-4" aria-hidden="true">
 				<a href="https://gnu.org">
-					<img src="../static/badges/gnubanner.gif" alt="GNU">
+					<img src="/static/badges/gnubanner.gif" alt="GNU">
 				</a>
 				<a href="">
-					<img src="../static/badges/hope.gif" alt="lost hope">
+					<img src="/static/badges/hope.gif" alt="lost hope">
 				</a>
 				<a href="https://kernel.org">
-					<img src="../static/badges/gnu-linux.gif" alt="GET LINUX">
+					<img src="/static/badges/gnu-linux.gif" alt="GET LINUX">
 				</a>
 				<a href="https://archlinux.org">
-					<img src="../static/badges/arch.gif" alt="arch linux">
+					<img src="/static/badges/arch.gif" alt="arch linux">
 				</a>
 				<a href="">
-					<img src="../static/badges/queerpride.gif" alt="pride">
+					<img src="/static/badges/queerpride.gif" alt="pride">
 				</a>
 				<a href="https://github.com/Krak9n/">
-					<img src="../static/badges/github-check.gif" alt="my gh">
+					<img src="/static/badges/github-check.gif" alt="my gh">
 				</a>
 				<a>
-					<img src="../static/badges/say-no-to-web3.gif">
+					<img src="/static/badges/say-no-to-web3.gif">
 				</a>
 				<a href="https://github.com/id-Software/DOOM">
-					<img src="../static/badges/doomrl.gif">
+					<img src="/static/badges/doomrl.gif">
 				</a>
 				<a href="https://discord.gg/B6kgfrAfwF">
-					<img src="../static/badges/discordserver.gif">
+					<img src="/static/badges/discordserver.gif">
 				</a>
 				</div>
 			</div>
@@ -204,25 +187,25 @@
 			  <a href="https://github.com/Krak9n/ranni">
 				<h3 class="text-zinc-100 hover:text-zinc-400 transition-colors mt-2">ranni</h3>
 			  </a>
-			  <p class="text-zinc-400">img/video to ascii tool. <b>rust</b> and <b>ffmpeg</b></p>
+			  <p class="text-zinc-400">img/video to ascii tool with <b>rust</b> and <b>ffmpeg</b></p>
 			</li>
 			<li>
 			  <a href="https://github.com/Krak9n/soltaire-ascii">
 				<h3 class="text-zinc-100 hover:text-zinc-400 transition-colors mt-2">soltaire</h3>
 			  </a>
-			  <p class="text-zinc-400">small card game for the terminal written in <b>java</b></p>
+			  <p class="text-zinc-400">small card game for the terminal in <b>java</b></p>
 			</li>
 			<li>
 			  <a href="https://github.com/Krak9n/unchained">
 				<h3 class="text-zinc-100 hover:text-zinc-400 transition-colors mt-2">unchained</h3>
 			  </a>
-			  <p class="text-zinc-400">game engine made in <b>cpp</b> using <b>opengl</b></p>
+			  <p class="text-zinc-400">game engine from scratch made in <b>cpp</b> using <b>opengl</b></p>
 			</li>
 			<li>
 			  <a href="https://github.com/Krak9n/cantor">
 				<h3 class="text-zinc-100 hover:text-zinc-400 transition-colors mt-2">cantor</h3>
 			  </a>
-			  <p class="text-zinc-400">minimalistic status bar for wayland written from scratch in <b>rust</b></p>
+			  <p class="text-zinc-400">minimalistic status bar for wayland written in <b>rust</b></p>
 			</li>
 		  </ul>
 		</div>
@@ -233,7 +216,7 @@
 		<div class="max-w-4xl mx-auto px-4 mt-4 md:mt-4">
 		  <h1> Latest Posts</h1>
 		  <span class="text-zinc-500">2026.07.29:</span>
-		  <a href="/blog/extreme-privacy" class="text-center text-zinc-100 hover:text-zinc-400 transition-colors font-semibold">
+		  <a href="/blog/extreme-privacy.html" class="text-center text-zinc-100 hover:text-zinc-400 transition-colors font-semibold">
 			Extreme Privacy, or stay like everyone else?
 		  </a>
 		</div>
