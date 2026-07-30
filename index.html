@@ -9,12 +9,14 @@
 
   </head>
   <body class="bg-zinc-950 text-zinc-100 flex flex-col text-base md:text-sm">
-	<input type="checkbox" id="sidebar-toggle" class="peer hidden"> <!--sheisse-->
+	<input type="checkbox" id="sidebar-toggle" class="peer hidden">
+
+	<label for="sidebar-toggle" class="md:hidden fixed top-4 right-4 z-50 p-2 bg-zinc-900 border border-zinc-800 cursor-pointer text-zinc-100">
+      <i class="ti ti-menu-2 text-2xl"></i>
+	</label>
 	
-  <div class="flex flex-1">
-    <label for="sidebar-toggle"
-      class="fixed inset-0 bg-black/50 z-30 hidden peer-checked:block md:hidden">
-    </label> <!--the button that i hate implementing-->
+	<div class="flex flex-1">
+	  <label for="sidebar-toggle" class="fixed inset-0 bg-black/50 z-30 hidden peer-checked:block md:hidden"></label>
 
      <aside class="
   fixed md:sticky top-0 md:top-0 left-0 z-40
@@ -61,39 +63,32 @@
   </details>
 </aside>
 
-	 <label for="sidebar-toggle" class="md:hidden px-3 cursor-pointer text-zinc-100"> 
-	   <i class="ti ti-menu-2 text-xl"></i>
-	 </label>
 	  <div class="flex-1 flex flex-col">
 		<div class="flex justify-center sticky top-0 z-20 bg-zinc-950 md:static">
 		  <nav class="flex items-center justify-between border-l border-r border-b border-zinc-800 gap-1 w-full max-w-4xl">
-  <div class="flex items-center">
-    <a href="/" class="px-2 md:px-4 py-2 md:py-4 text-lg font-semibold text-zinc-100 hover:text-zinc-400 transition-colors">
-      /home/eto/
-    </a>
-  </div>
-  <div class="flex items-center gap-2">
-	<a href="mailto:batistaq@proton.me" class="px-2 md:px-4 py-2 md:py-4 text-right text-zinc-400 hover:text-zinc-100 italic transition-colors hidden sm:block">
-	  batistaq@proton.me
-	</a>
-    <label for="sidebar-toggle" class="md:hidden px-3 py-2 cursor-pointer text-zinc-100">
-      <i class="ti ti-menu-2 text-2xl"></i>
-    </label>
-  </div>
+  <a href="/" class="px-2 md:px-4 py-2 md:py-4 text-lg font-semibold text-zinc-100 hover:text-zinc-400 transition-colors">
+    /home/eto/
+  </a>
+  <a href="mailto:batistaq@proton.me" class="px-2 md:px-4 py-2 md:py-4 text-right text-zinc-400 hover:text-zinc-100 italic transition-colors">
+    batistaq@proton.me
+  </a>
   <!--flag{not_quite_it}-->
 </nav>
 
 		</div>
 		<main class="p-8 max-w-4xl mx-auto px-4 py-8 text-base md:text-base">
-		<h1 class="text-center text-2xl md:text-3xl font-bold mb-4">Welcome!</h1>
-		<p class="text-zinc-400 py-4 md:py-6">
-			So, hey! My name is <b><u>eto</u></b>.<br><br>
-			Your presence here means that you somehow found this website on the depths of the internet. Thank you! :3 <br>
-			I am interested in many things, starting with <b>Graphics Programming</b>, <b>Maths</b>, <b>CyberSecurity</b>, <b>Operating Systems</b>, and a lot more.
+		  <h1 class="text-2xl md:text-3xl font-bold mb-4">Welcome!</h1>
+		  <p class="text-zinc-400 py-4 md:py-6">
+			I'm <b class="underline">eto</b> (he/they)! Mainly a <u>paranoid programmer</u>, secondly an inspiring <u>systems administrator</u>. However, I am better known as someone with way too many interests. :3<br><br>
+		  <b>Graphics Programming</b>, <b>Maths</b>, <b>Cyber Security</b>, <b>Operating Systems</b>, <b>Music</b> and a lot more. I do whatever I find interesting. I participate in whatever I like. And tend to talk to people I find smarter than myself.
 			<br><br>
-			This website will be growing with time, its structure won't be consistent, it may break, or it will just work. Who knows?
-			<br><br>
-			Anyways, for now I am lost in the sea of projects, and the homelab setup. There is so much to learn.  
+			This website has just been recently created. And so it will grow over time, its structure won't be consistent, it may break, or it will just work. Who knows?
+			<br>
+
+			<div class="text-zinc-400">
+			  Email me your ideas, <i>if you have any</i>: <a href="mailto:batistaq@proton.me" class="underline text-zinc-400 hover:text-zinc-100 transition-colors">batistaq@proton.me</a>
+			</div><br>
+
 
 			<blockquote class="p-4 my-4 border-s-4 border-default bg-neutral-secondary-soft">
 			<p class="italic leading-relaxed text-heading">An "intellectual" is not really a thing, knowing a lot about a lot is not a personality. The pursuit of knowledge is great but making it your entire identity is a recipe for failure. You'll spend your life always chasing new knowledge and never appreciate the knowledge you have.
@@ -127,7 +122,7 @@
 		</div>
 
 		<div class="max-w-4xl mx-auto px-4">
-		<div class="marquee my-4 overflow-hidden">
+		  <div class="marquee my-4 overflow-hidden">
 			<div class="marquee-track flex w-max">
 				<!-- hide overflow -->
 				<div class="marquee-group flex items-center justify-center gap-4 pr-4">
@@ -189,47 +184,52 @@
 				</a>
 				</div>
 			</div>
-			</div>
-		<p class="flex">some of my recent projects</p>
 		</div>
-		<div class="max-w-4xl mx-auto px-4 mb-16">
-		<div class="grid grid-cols-3 grid-rows-2 gap-4">
-			<div class="col-span-2 row-span-2">
-			<a href="https://github.com/Krak9n/ranni">
-				<img src="/static/imgs/sakura.jpeg" alt="ranni shit" class="w-full h-full object-cover rounded-md">
-			</a>
-			<h3 class="text-zinc-100 semibold mt-2">ranni</h3>
-			<p class="text-zinc-400">img/video to ascii tool. made with <b>rust</b> and <b>ffmpeg</b></p>
-			</div>
-			<div>
-			<a href="https://github.com/Krak9n/soltaire-ascii">
-				<img src="/static/imgs/soltaire.png" alt="the ascii implementation of the soltaire game">
-			</a>
-			<h3 class="text-zinc-100 semibold mt-2">soltaire</h3>
-			<p class="text-zinc-400 text-sm">my implementation of the old and famous card game in <b>java</b></p>
-			</div>
-			<div>
-			<a href="https://github.com/Krak9n/unchained">
-				<img src="/static/imgs/old_ge.png" alt="the ascii implementation of the soltaire game">
-			</a>
-			<h3 class="text-zinc-100 semibold mt-2">unchained (unfinished)</h3>
-			<p class="text-zinc-400 text-sm">simple game engine made in <b>cpp</b> using <b>opengl</b></p>
-			</div>
+		<br>
+		<hr class="max-w-4xl mx-auto border-zinc-800"><br>
+		<h1 class="flex">Recent Projects</h1>
 		</div>
+		<div class="max-w-4xl mx-auto px-4 md:mt-4">
+		  <ul class="list-disc">
+			<li>
+			  <a href="https://github.com/Krak9n/ranni">
+				<h3 class="text-zinc-100 semibold mt-2">ranni</h3>
+			  </a>
+			  <p class="text-zinc-400 hover:text-zinc-100 transition-colors">img/video to ascii tool. <b>rust</b> and <b>ffmpeg</b></p>
+			</li>
+			<li>
+			  <a href="https://github.com/Krak9n/soltaire-ascii">
+				<h3 class="text-zinc-100 semibold mt-2">soltaire</h3>
+			  </a>
+			  <p class="text-zinc-400 hover:text-zinc-100 transition-colors">small card game for the terminal written in <b>java</b></p>
+			</li>
+			<li>
+			  <a href="https://github.com/Krak9n/unchained">
+				<h3 class="text-zinc-100 semibold mt-2">unchained</h3>
+			  </a>
+			  <p class="text-zinc-400 hover:text-zinc-100 transition-colors">game engine made in <b>cpp</b> using <b>opengl</b></p>
+			</li>
+			<li>
+			  <a href="https://github.com/Krak9n/cantor">
+				<h3 class="text-zinc-100 semibold mt-2">cantor</h3>
+			  </a>
+			  <p class="text-zinc-400 hover:text-zinc-100 transition-colors">minimalistic status bar for wayland written from scratch in <b>rust</b></p>
+			</li>
+		  </ul>
 		</div>
+		<br>
+		
 		<hr class="max-w-4xl mx-auto border-zinc-800">
 
 		<div class="max-w-4xl mx-auto px-4 mt-4 md:mt-4">
-		  <div class="text-zinc-400">
-			Send your ideas, <i>if you have any</i>, to: <a href="mailto:batistaq@proton.me" class="text-zinc-100 font-bold hover:text-zinc-400 transition-colors">batistaq@proton.me</a>
-		  </div><br>
 		  <h1> Latest Posts</h1>
 		  <span class="text-zinc-500">2026.07.29:</span>
 		  <a href="/blog/extreme-privacy.html" class="text-center text-zinc-300 hover:text-zinc-100 transition-colors font-bold">
 			Extreme Privacy, or stay like everyone else?
 		  </a>
 		</div>
-
+	  </main>
+		<div class="text-base">
 		<footer class="md:px-6 md:py-6 px-4 py-4">
   <div class="max-w-4xl mx-auto px-4 flex items-center justify-between">
 	<span class="text-zinc-400">
@@ -241,7 +241,7 @@
   </div>
 </footer>
 
-	  </main>
+		</div>
 	  </div>
 	</div>
 	
