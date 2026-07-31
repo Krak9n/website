@@ -21,7 +21,7 @@
   <i class="ti ti-menu-2 text-2xl"></i>
 </button>
 
-<aside class="
+<aside id="sidebar" class="
   fixed md:sticky top-0 left-0 z-40
   w-64 h-screen p-4 flex flex-col gap-1 overflow-y-auto
   border-r border-zinc-800 bg-zinc-950
@@ -34,10 +34,10 @@
 	  blog
 	</summary>
 	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/blog" class="text-zinc-400 hover:text-zinc-100 text-sm">main</a></li>
+	  <li><a href="/blog/main.html" class="text-zinc-400 hover:text-zinc-100 text-sm">main</a></li>
 	</ul>
 	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/blog/extreme-privacy" class="text-zinc-400 hover:text-zinc-100 text-sm">extreme privacy, or stay like everyone else?</a></li>
+	  <li><a href="/blog/extreme-privacy.html" class="text-zinc-400 hover:text-zinc-100 text-sm">extreme privacy, or stay like everyone else?</a></li>
 	</ul>
   </details>
 
@@ -47,13 +47,13 @@
 	  homelab
 	</summary>
 	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/homelab" class="text-zinc-400 hover:text-zinc-100 text-sm">main</a></li>
+	  <li><a href="/homelab.html" class="text-zinc-400 hover:text-zinc-100 text-sm">main</a></li>
 	</ul>
   </details>
 
   <ul class="pl-4 flex flex-col">
 	<li>
-	  <a href="/projects" class="italic text-zinc-300 hover:text-zinc-100 ">projects</a>
+	  <a href="/projects.html" class="italic text-zinc-300 hover:text-zinc-100 ">projects</a>
 	</li>
   </ul>
 
@@ -107,7 +107,7 @@
 			</a>
 			</li>
 			<li>
-			<a href="/resume" class="flex items-center gap-1.5 text-zinc-400 hover:text-zinc-100 transition-colors" rel="noopener noreferrer">
+			<a href="/static/files/cv.pdf" class="flex items-center gap-1.5 text-zinc-400 hover:text-zinc-100 transition-colors" rel="noopener noreferrer">
 				<b><u>cv</u></b>
 			</a>
 			</li>
@@ -125,60 +125,60 @@
 				<!-- hide overflow -->
 				<div class="marquee-group flex items-center justify-center gap-4 pr-4">
 				<a href="https://gnu.org" target="_blank" rel="noopener noreferrer">
-					<img src="../static/badges/gnubanner.gif" alt="GNU">
+					<img src="/static/badges/gnubanner.gif" alt="GNU">
 				</a>
 				<a href="">
-					<img src="../static/badges/hope.gif" alt="lost hope">
+					<img src="/static/badges/hope.gif" alt="lost hope">
 				</a>
 				<a href="https://kernel.org">
-					<img src="../static/badges/gnu-linux.gif" alt="GET LINUX">
+					<img src="/static/badges/gnu-linux.gif" alt="GET LINUX">
 				</a>
 				<a href="https://archlinux.org">
-					<img src="../static/badges/arch.gif" alt="arch linux">
+					<img src="/static/badges/arch.gif" alt="arch linux">
 				</a>
 				<a href="">
-					<img src="../static/badges/queerpride.gif" alt="pride">
+					<img src="/static/badges/queerpride.gif" alt="pride">
 				</a>
 				<a href="https://github.com/Krak9n/">
-					<img src="../static/badges/github-check.gif" alt="my gh">
+					<img src="/static/badges/github-check.gif" alt="my gh">
 				</a>
 				<a>
-					<img src="../static/badges/say-no-to-web3.gif">
+					<img src="/static/badges/say-no-to-web3.gif">
 				</a>
 				<a href="https://github.com/id-Software/DOOM">
-					<img src="../static/badges/doomrl.gif">
+					<img src="/static/badges/doomrl.gif">
 				</a>
 				<a href="https://discord.gg/B6kgfrAfwF">
-					<img src="../static/badges/discordserver.gif">
+					<img src="/static/badges/discordserver.gif">
 				</a>
 				</div>
 				<div class="marquee-group flex items-center gap-4 pr-4" aria-hidden="true">
 				<a href="https://gnu.org">
-					<img src="../static/badges/gnubanner.gif" alt="GNU">
+					<img src="/static/badges/gnubanner.gif" alt="GNU">
 				</a>
 				<a href="">
-					<img src="../static/badges/hope.gif" alt="lost hope">
+					<img src="/static/badges/hope.gif" alt="lost hope">
 				</a>
 				<a href="https://kernel.org">
-					<img src="../static/badges/gnu-linux.gif" alt="GET LINUX">
+					<img src="/static/badges/gnu-linux.gif" alt="GET LINUX">
 				</a>
 				<a href="https://archlinux.org">
-					<img src="../static/badges/arch.gif" alt="arch linux">
+					<img src="/static/badges/arch.gif" alt="arch linux">
 				</a>
 				<a href="">
-					<img src="../static/badges/queerpride.gif" alt="pride">
+					<img src="/static/badges/queerpride.gif" alt="pride">
 				</a>
 				<a href="https://github.com/Krak9n/">
-					<img src="../static/badges/github-check.gif" alt="my gh">
+					<img src="/static/badges/github-check.gif" alt="my gh">
 				</a>
 				<a>
-					<img src="../static/badges/say-no-to-web3.gif">
+					<img src="/static/badges/say-no-to-web3.gif">
 				</a>
 				<a href="https://github.com/id-Software/DOOM">
-					<img src="../static/badges/doomrl.gif">
+					<img src="/static/badges/doomrl.gif">
 				</a>
 				<a href="https://discord.gg/B6kgfrAfwF">
-					<img src="../static/badges/discordserver.gif">
+					<img src="/static/badges/discordserver.gif">
 				</a>
 				</div>
 			</div>
@@ -189,7 +189,7 @@
 		<hr class="max-w-4xl mx-auto border-zinc-800"><br>
 	
 		<div class="max-w-4xl mx-auto px-4 md:mt-4">
-		  <img src="../static/imgs/kaneki1.png" class="border border-zinc-150" alt="privacy over anything">
+		  <img src="/static/imgs/kaneki1.png" class="border border-zinc-150" alt="privacy over anything">
 		  <br>
 		</div>
 		  <p class="justify-end text-zinc-400">~ This is an excerpt from one of my favourite books, <a href="https://inteltechniques.com/book7.html" class="text-zinc-100 hover:text-zinc-400 transition-colors">Extreme Privacy: What It Takes to Disappear.</a> This book will teach more about life than anything else.</p>
