@@ -30,7 +30,7 @@ this.
 --- Free Software, Free Society: The Selected Essays of Richard M. Stallman
 #+end_quote
 
-* Chapter 1: What Is Free Software?
+* Chapter 1: Motivation
 
 Hello internet. I have to admit, I am a NVim user, and relied on this text
 editor for more than two and a half years. My old config was written from
@@ -45,8 +45,7 @@ Bloggers are nice, but I wasn't ready for a change. I was quite used to vim
 motions, lightweight tui text editor, lua programming language, and nice
 community. I was quite fond of the FOSS philosophy and what power it gives. One
 would say communism, but well designed communism :). It was in the March of this
-year when I discovered [[*Chapter 1: Motivation][Free Software, Free Society: The Selected Essays of
-Richard M. Stallman]]. Reading through it changed my views on software world so
+year when I discovered [[https://en.wikipedia.org/wiki/Free_Software%2C_Free_Society][Free Software, Free Society: The Selected Essays of Richard M. Stallman]]. Reading through it changed my views on software world so
 much. This read would be my personal recommendation.  Still, I wasn't ready and
 continued to heavily rely on NVim for everyday tasks and projects. Until I had a
 need to reinstall my Arch Linux system.

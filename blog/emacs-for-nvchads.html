@@ -21,7 +21,7 @@
 			};
 		</script>
 	</head>
-	<body class="bg-zinc-950 text-zinc-400 min-h-screen flex flex-col text-xl md:text-base">
+	<body class="bg-zinc-950 text-zinc-400 min-h-screen flex flex-col text-lg md:text-base">
 		<div class="flex flex-1">
 			<!--i hate css-->
 
@@ -132,7 +132,7 @@
 					<hr class="max-w-4xl mx-auto border-zinc-800">
 					<br>
 
-					<p class="text-lg font-bold" id="Chapter-1">Chapter 1: What Is Free Software?</p>
+					<p class="text-lg font-bold" id="Chapter-1">Chapter 1: Motivation</p>
 					<br>
 					
 					Hello internet. I have to admit, I am a NVim user, and relied on this text
@@ -163,7 +163,7 @@
 					do? I then wrote this small config for configuring stuff while still in tty
 					<br>
 
-						<div class="group relative my-5">
+					<div class="group relative my-5">
 						<span class="absolute -top-2.5 right-3 hidden group-hover:inline-block
 									px-2 py-0.5 text-[0.65rem] uppercase tracking-wide
 									text-zinc-400 bg-zinc-800">
@@ -172,7 +172,7 @@
 						<div class="font-mono text-xs text-zinc-500 px-4 py-1.5 bg-zinc-800/60 border border-zinc-800 border-b-0">
 							~/.config/nvim/init.lua
 						</div>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-lua font-iosevka">local opt = vim.opt
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-lua font-iosevka">local opt = vim.opt
 opt.tabstop = 4
 opt.number = true
 opt.relativenumber = true
@@ -286,7 +286,7 @@ keymap("n", '<leader>tf', '<cmd>tabnew %<CR>', {desc = "Open current buffer in a
 									text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq name "eto")
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq name "eto")
 ;; or
 (defvar name "eto"
    "Author's name.")</code></pre></div>
@@ -304,7 +304,7 @@ keymap("n", '<leader>tf', '<cmd>tabnew %<CR>', {desc = "Open current buffer in a
 									text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(let ((x 10)
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(let ((x 10)
      (y 10))
 (+ x y))</code></pre></div>
 
@@ -320,7 +320,7 @@ keymap("n", '<leader>tf', '<cmd>tabnew %<CR>', {desc = "Open current buffer in a
 									text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(defun italian (name)
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(defun italian (name)
 	"Greet in italian."
 	(message "Ciao, %s.", name))
 
@@ -367,7 +367,7 @@ keymap("n", '<leader>tf', '<cmd>tabnew %<CR>', {desc = "Open current buffer in a
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq mlist '(1 2 3)) ;; define a list of three elements
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq mlist '(1 2 3)) ;; define a list of three elements
 (B 3 4 "A") ;; a list of four elements
 () ;; empty list
 nil ;; empty list
@@ -380,7 +380,7 @@ nil ;; empty list
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(car mlist) ;; the index element
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(car mlist) ;; the index element
 (cdr mlist) ;; rest of the list after index
 (nth 'number mlist) ;; retuns the nth element
 (nthcdr 'number mlist) ;; returns the nth cdr of the list
@@ -400,7 +400,7 @@ nil ;; empty list
 					as a terminator of the list. Which is not required, but the list notation makes it easier to read.<br><br>
 
 					They can also be represented in such manner:<br><br>
-					<pre class="font-iosevka text-sm text-zinc-400 bg-zinc-800 overflow-x-auto my-6 leading-relaxed">
+					<pre class="font-iosevka code-block-fluid text-sm text-zinc-400 bg-zinc-800 overflow-x-auto my-6 leading-relaxed">
  	 --- ---      --- ---      --- ---
 	|   |   |--> |   |   |--> |   |   |--> nil
 	--- ---      --- ---      --- ---
@@ -413,7 +413,7 @@ nil ;; empty list
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(1 . (2 . (3 . nil)))</code></pre></div>
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(1 . (2 . (3 . nil)))</code></pre></div>
 
 					+ lists :: <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Lists.html" class="text-zinc-300 hover:text-zinc-100 transition-colors">elisp/Lists</a>
 					<br><br>
@@ -434,7 +434,7 @@ nil ;; empty list
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(lambda (x)
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(lambda (x)
   "Calculate the sin of x using Bhaskara I’s Sine Approximation Formula."
   (/
     (* (* 16 x) (- 3.14 x))
@@ -454,7 +454,7 @@ nil ;; empty list
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(if (> 6 7)
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(if (> 6 7)
   "6 is greater"
   "7 is greater")
 
@@ -531,7 +531,7 @@ nil ;; empty list
 						<div class="font-mono text-xs text-zinc-500 px-4 py-1.5 bg-zinc-800/60 border border-zinc-800 border-b-0">
 							~/.emacs.d/init.el
 						</div>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq custom-file "~/.emacs.d/custom.el")
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq custom-file "~/.emacs.d/custom.el")
 (load-file "~/.emacs.d/custom.el")
 
 (setq inhibit-startup-screen t)
@@ -598,7 +598,7 @@ nil ;; empty list
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq backup-directory-alist `(("." . ,(concat user-emacs-directory "backups"))))</code></pre></div>
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq backup-directory-alist `(("." . ,(concat user-emacs-directory "backups"))))</code></pre></div>
 
 					<hr class="max-w-4xl mx-auto border-zinc-900"><br>
 					<p class="text-lg font-bold">Default identation</p>
@@ -609,7 +609,7 @@ nil ;; empty list
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq-default tab-width 4)
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq-default tab-width 4)
 (setq-default indent-tabs-mode 4)
 (setq-default c-basic-offset 4)</code></pre></div>
 
@@ -623,7 +623,7 @@ nil ;; empty list
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(require 'package)
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(require 'package)
 (setq package-archives
   '(("melpa" . "https://melpa.org/packages/")
     ("nongnu" . "https://elpa.nongnu.org/nongnu/")
@@ -665,7 +665,7 @@ nil ;; empty list
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(require 'voidlight-theme)</code></pre></div>
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(require 'voidlight-theme)</code></pre></div>
 
 					<hr class="max-w-4xl mx-auto border-zinc-900"><br>
 					<p class="text-lg font-bold">Rust</p>
@@ -676,7 +676,7 @@ nil ;; empty list
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(require 'rust-mode)
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(require 'rust-mode)
 (defun sp1ff/rust/mode-hook ()
   "rust-mode hook."
   ;; Style per the Rust Style Guide:
@@ -711,7 +711,7 @@ nil ;; empty list
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq evil-want-keybinding nil)
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq evil-want-keybinding nil)
 (require 'evil)
 (evil-mode 1)
 (use-package evil-collection
@@ -740,7 +740,7 @@ nil ;; empty list
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(use-package magit
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(use-package magit
   :ensure t)</code></pre></div>
 
 					A repository can always be initialized using <b>C-x g</b>.<br><br>
@@ -773,7 +773,7 @@ nil ;; empty list
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq org-agenda-files '("~/org/"))
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq org-agenda-files '("~/org/"))
 (setq org-log-done 'time)
 
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
@@ -792,7 +792,7 @@ nil ;; empty list
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(use-package org-roam-ui
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(use-package org-roam-ui
   (:host github :repo "org-roam/org-roam-ui" :branch "main" :files ("*.el" "out"))
    :after org-roam
    :config
@@ -808,7 +808,7 @@ nil ;; empty list
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">:hook (after-init . org-roam-ui-mode)</code></pre></div>
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">:hook (after-init . org-roam-ui-mode)</code></pre></div>
 
 					Then to explore, run <b>M-x org-mode-ui-mode</b>, and visit <b>localhost:35901</b> in your
 					browser.
@@ -822,7 +822,7 @@ nil ;; empty list
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(use-package dired-open
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(use-package dired-open
   :config
   (setq dired-open-extensions '(("pdf" . "zathura")
                                 ("mkv" . "mpv"))))</code></pre></div>
