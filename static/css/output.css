@@ -453,9 +453,6 @@
   .pl-5 {
     padding-left: calc(var(--spacing) * 5);
   }
-  .pl-6 {
-    padding-left: calc(var(--spacing) * 6);
-  }
   .pl-8 {
     padding-left: calc(var(--spacing) * 8);
   }
@@ -723,6 +720,10 @@ marquee-group {
 }
 pre[class*="language-"], code[class*="language-"] {
   font-family: 'Iosevka', monospace !important;
+}
+.code-block-fluid {
+  font-size: clamp(0.7rem, 2.5vw, 0.875rem);
+  padding: clamp(0.5rem, 3vw, 1rem);
 }
 @layer base {
   @font-face {
