@@ -392,7 +392,7 @@ nil ;; empty list
 (pop mlist) ;; a way to examine the car of a list and to take it off
 (append mlist (list 'a 'b)) ;; combine lists
 (mapcar #'sqrt '(1 3)) ;; applies a function to each element of a list in a sequence of turns</code></pre></div>
-								<br>
+
 								There is also the Dotted pair notation that is used to represent CAR and CDR explicitly.<br><br>
 
 								In this notation a standard list is written as <code class="font-iosevka text-[0.85em] px-1.5 py-0.5 bg-zinc-800 text-zinc-200">(1 . (2 . (3 . nil)))</code>,
@@ -402,7 +402,7 @@ nil ;; empty list
 								In the case of our example the <b>1</b> was the CAR, while <b>2</b> and <b>3</b> are the CDR, and nil was used
 								as a terminator of the list. Which is not required, but the list notation makes it easier to read.<br><br>
 
-								They can also be represented in such manner:<br><br>
+								They can also be represented in such way:
 								<pre class="font-iosevka code-block-fluid text-sm text-zinc-400 bg-zinc-800 overflow-x-auto my-6 leading-relaxed">
  	 --- ---      --- ---      --- ---
 	|   |   |--> |   |   |--> |   |   |--> nil
