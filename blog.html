@@ -27,28 +27,15 @@
   -translate-x-full md:translate-x-0
   transition-transform duration-200
 ">
-  <details class="group">
-	<summary class="flex items-center gap-1 cursor-pointer text-zinc-300 hover:text-zinc-100 py-1 list-none">
-	  <i class="ti ti-chevron-right text-xs transition-transform group-open:rotate-90"></i>
-	  blog
-	</summary>
-	<ul class="pl-5 flex flex-col gap-1 mt-1">
-	  <li><a href="/blog/extreme-privacy.html" class="text-zinc-400 hover:text-zinc-100 text-sm">extreme privacy, or stay like everyone else?</a></li>
-	  <li><a href="/blog/emacs-for-nvchads.html" class="text-zinc-400 hover:text-zinc-100 text-sm">emacs for nvchads</a></li>
-	</ul>
-  </details>
+  <ul class="flex flex-col gap-1 plus-list">
+	<li>
+	  <a href="/blog.html" class="text-zinc-300 hover:text-zinc-100 transition-colors">blog</a>
+	</li>
+  </ul>
 
   <ul class="flex flex-col plus-list gap-1">
 	<li>
-	  <a href="/projects.html" class="text-zinc-300 hover:text-zinc-100 ">projects</a>
-	</li>
-
-	<li>
-	  <a href="/homelab.html" class="text-zinc-300 hover:text-zinc-100 ">homelab</a>
-	</li>
-
-	<li>
-	  <a href="/thoughts.html" class="text-zinc-300 hover:text-zinc-100 ">thoughts</a>
+	  <a href="/projects.html" class="text-zinc-300 hover:text-zinc-100 transition-colors">projects</a>
 	</li>
   </ul>
 
@@ -69,25 +56,21 @@
 		</div>
 
 		<div class="flex-1 max-w-4xl mx-auto px-5 py-8 w-full">
-		  <b>~/thoughts.html</b> is a place where I post my little thoughts that didn't make it to <b>~/blog/</b>. Here, I will write my small essays, some short thoughts and  my views on some recent industry and/or world news.<br><br>
-		  Oldest posts will be at the bottom and the latest at the top, of course. Dates can be searched via fragment identifiers.<br><br>
+		<p class="flex text-xl" id="2026">2026</p>
+		<div class="max-w-4xl mx-auto px-4 mt-4 md:mt-4">
+		  <span class="text-zinc-500">2026.08.07:</span>
+		  <a href="/blog/emacs-for-nvchads.html" class="text-center text-zinc-200 hover:text-zinc-400 transition-colors font-semibold">
+			Emacs for NvChads
+		  </a>
+		  <br>
+		  <span class="text-zinc-500">2026.07.29:</span>
+		  <a href="/blog/extreme-privacy.html" class="text-center text-zinc-200 hover:text-zinc-400 transition-colors font-semibold">
+			Extreme Privacy, or stay like everyone else?
+		  </a>
 
-		  <hr class="max-w-4xl mx-auto border-zinc-800"><br>
-
-		  <div id="2026.08.03">
-			<a href="#2026.08.03" class="text-lg text-zinc-100 hover:text-zinc-400 transition-colors">2026.08.03</a><br>
-			Hey. Initial <i>thought</i>, I guess.<br><br>
-
-			I have been working on a couple of projects lately and trying to combine it all with my part-time job and preparations for the IMO.<br><br>
-
-			I plan to implement RSS feed in the coming days. So, subscribe if you want to.<br>
-			Cheers :3<br><br>
-
-			P.S.: Article on Emacs is coming soon.<br><br>
-			<hr class="max-w-4xl mx-auto border-zinc-800"><br>
-		  </div>
-		  
 		</div>
+
+      </div>
 
 		<footer class="md:px-6 md:py-6 px-4 py-4">
   <div class="max-w-4xl mx-auto px-4 flex items-center justify-between">
@@ -100,7 +83,6 @@
   </div>
 </footer>
 
-      </div>
 	</div>
   </body>
 </html>
