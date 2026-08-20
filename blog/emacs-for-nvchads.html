@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>eto: Emacs for NvChads</title>
+		<title>Emacs for NvChads | eto</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
 		<link rel="stylesheet" href="/static/css/output.css">
@@ -21,52 +21,27 @@
 		 };
 		</script>
 	</head>
-	<body class="bg-zinc-950 text-zinc-400 min-h-screen flex flex-col text-lg md:text-base">
+	<body class="bg-zinc-950 text-zinc-400 min-h-screen flex flex-col text-base md:text-base">
 
 		<div class="flex flex-1">
-
-			<!--i hate css-->
-
-<button
-  onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full')"
-  class="md:hidden fixed top-11 right-0 z-50 p-2 bg-zinc-950 border border-zinc-800 text-zinc-100">
-  <i class="ti ti-menu-2 text-2xl"></i>
-</button>
-
-<aside id="sidebar" class="
-  fixed md:sticky top-0 z-40
-  w-64 h-screen p-4 flex flex-col gap-1 overflow-y-auto
-  border-r border-zinc-800 bg-zinc-950
-  -translate-x-full md:translate-x-0
-  transition-transform duration-200
-">
-  <ul class="flex flex-col gap-1 plus-list">
-	<li>
-	  <a href="/blog.html" class="text-zinc-300 hover:text-zinc-100 transition-colors">blog</a>
-	</li>
-  </ul>
-
-  <ul class="flex flex-col plus-list gap-1">
-	<li>
-	  <a href="/projects.html" class="text-zinc-300 hover:text-zinc-100 transition-colors">projects</a>
-	</li>
-  </ul>
-
-</aside>
-
-
 			<div class="flex-1 flex flex-col min-w-0">
-				<div class="flex justify-center sticky top-0 z-20">
-					<nav class="flex items-center justify-between border-l border-r border-b border-zinc-800 gap-1 w-full max-w-4xl bg-zinc-950">
-  <a href="/" class="px-2 md:px-4 py-2 md:py-4 text-lg font-bold text-zinc-100 hover:text-zinc-400 transition-colors">
-    /home/eto/
-  </a>
-  <a href="mailto:batistaq@proton.me" class="px-2 md:px-4 py-2 md:py-4 text-right text-zinc-400 hover:text-zinc-100 italic transition-colors">
-    batistaq@proton.me
-  </a>
-</nav>
 
-				</div>
+			  <div class="flex justify-center top-0 z-20">
+  <nav class="flex justify-center">
+	<ul class="menu">
+	  <li>
+		<a href="/index.html" class="font-bold text-lg hover:underline">Home</a>
+	  </li>
+	  <li>
+		<a href="/blog.html" class="font-bold text-lg hover:underline">Blog</a>
+	  </li>
+	  <li>
+		<a href="/projects.html" class="font-bold text-lg hover:underline">Projects</a>
+	  </li>
+	</ul>
+  </nav>
+</div>
+
 
 				<div class="flex-1 max-w-4xl mx-auto px-5 py-8 w-full">
 					<h2 class="text-xl font-bold text-zinc-100">Emacs for NvChads</h2>
@@ -75,14 +50,14 @@
 					<hr class="max-w-4xl mx-auto border-zinc-800"><br>
 					
 
-					<a href="#Acknowledgments" class="text-lg font-bold hover:text-zinc-100 text-zinc-300 transition-colors" id="Acknowledgments">Acknowledgments</a>
+					<a href="#Acknowledgments" class="text-lg font-bold hover:underline text-zinc-100 transition-colors" id="Acknowledgments">Acknowledgments</a>
 					<br><br>
 
 					Before We get started with the article I'd like to mention that I am just getting
 					started with everything written below. If you have any suggesting consider
-					emailing me. I am very grateful to deci (<a href="https://codeberg.org/decipaliz" class="text-zinc-300 hover:text-zinc-100 transition-colors">codeberg</a> / <a href="https://t.me/decipaliz" class="text-zinc-300 hover:text-zinc-100 transition-colors"> telegram</a> / <a href="mailto:decipaliz@disroot.org" class="text-zinc-300 hover:text-zinc-100 transition-colors">disroot</a>) for the revisions and editing. I plan to expand this topic with some time. Good time reading!<br><br>
+					emailing me. I am very grateful to deci (<a href="https://codeberg.org/decipaliz" class="text-zinc-300 hover:underline transition-colors">codeberg</a> / <a href="https://t.me/decipaliz" class="text-zinc-300 hover:underline transition-colors"> telegram</a> / <a href="mailto:decipaliz@disroot.org" class="text-zinc-300 hover:underline transition-colors">disroot</a>) for the revisions and editing. I plan to expand this topic with some time. Good time reading!<br><br>
 
-					This article was originally written in Org Mode. Get it here if you want to: <a href="/static/files/emacs-setup.org" class="text-zinc-300 hover:text-zinc-100 transition-colors">qlain.online/emacs.org</a>
+					This article was originally written in Org Mode. Get it here if you want to: <a href="/static/files/emacs-setup.org" class="text-zinc-300 hover:underline transition-colors">qlain.online/emacs.org</a>
 
 					<br><br>
 					No AI was used here.
@@ -125,7 +100,7 @@
 					<br>
 
 
-					<a href="#Chapter-1" class="text-lg font-bold hover:text-zinc-100 text-zinc-300 transition-colors" id="Chapter-1">Chapter 1: Motivation</a>
+					<a href="#Chapter-1" class="text-lg font-bold hover:underline text-zinc-100 transition-colors" id="Chapter-1">Chapter 1: Motivation</a>
 					<br><br>
 					
 					Hello internet. I have to admit, I am a NVim user, and relied on this text
@@ -141,7 +116,7 @@
 					motions, lightweight tui text editor, lua programming language, and nice
 					community. I was quite fond of the FOSS philosophy and what power it gives. One
 					would say communism, but well designed communism :). It was in the March of this
-					year when I discovered <a href="https://en.wikipedia.org/wiki/Free_Software%2C_Free_Society" class="text-zinc-300 hover:text-zinc-100 transition-colors">Free Software, Free Society: The Selected Essays of Richard M. Stallman</a>. Reading through it changed my views on software world so
+					year when I discovered <a href="https://en.wikipedia.org/wiki/Free_Software%2C_Free_Society" class="text-zinc-300 hover:underline transition-colors">Free Software, Free Society: The Selected Essays of Richard M. Stallman</a>. Reading through it changed my views on software world so
 					much. This read would be my personal recommendation.  Still, I wasn't ready and
 					continued to heavily rely on NVim for everyday tasks and projects. Until I had a
 					need to reinstall my Arch Linux system.
@@ -162,10 +137,10 @@
 									 text-zinc-400 bg-zinc-800">
 							Lua
 						</span>
-						<div class="font-jetbrains text-xs text-zinc-500 px-4 py-1.5 bg-zinc-800/60 border border-zinc-800 border-b-0">
+						<div class="font-iosevka text-xs text-zinc-500 px-4 py-1.5 bg-zinc-800/60 border border-zinc-800 border-b-0">
 							~/.config/nvim/init.lua
 						</div>
-						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-xs md:text-sm"><code class="language-lua font-jetbrains">local opt = vim.opt
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-xs md:text-sm"><code class="language-lua font-iosevka">local opt = vim.opt
 opt.tabstop = 4
 opt.number = true
 opt.relativenumber = true
@@ -197,7 +172,7 @@ keymap("n", '<leader>tf', '<cmd>tabnew %<CR>', {desc = "Open current buffer in a
 					<br>
 
 
-					<a href="#Chapter-2" class="text-lg font-bold text-zinc-300 hover:text-zinc-100 transition-colors" id="Chapter-2">Chapter 2: ELisp</a>
+					<a href="#Chapter-2" class="text-lg font-bold text-zinc-100 hover:underline transition-colors" id="Chapter-2">Chapter 2: ELisp</a>
 					<br><br>
 					
 					Emacs is a highly customizable text editor that uses a custom interpreted config
@@ -208,7 +183,7 @@ keymap("n", '<leader>tf', '<cmd>tabnew %<CR>', {desc = "Open current buffer in a
 					<br><br>
 
 					For example for scripts:
-					<code class="font-jetbrains text-[0.85em] px-1.5 py-0.5 bg-zinc-800 text-zinc-200">#!/usr/bin/env -S emacs --script</code>
+					<code class="font-iosevka text-[0.85em] px-1.5 py-0.5 bg-zinc-800 text-zinc-200">#!/usr/bin/env -S emacs --script</code>
 
 					<br><br>
 
@@ -242,7 +217,7 @@ keymap("n", '<leader>tf', '<cmd>tabnew %<CR>', {desc = "Open current buffer in a
 						also called 'subr', which derives from "subroutine"
 						<li>records :: custom types</li>
 					</ul>
-					<i>read here: <a href="https://www.gnu.org/software/emacs/manual/html_mono/elisp.html#Lisp-Data-Types/" class="text-zinc-200 hover:text-zinc-400">elisp/Lisp-Data-Types</a></i>
+					<i>read here: <a href="https://www.gnu.org/software/emacs/manual/html_mono/elisp.html#Lisp-Data-Types/" class="text-zinc-200 hover:underline">elisp/Lisp-Data-Types</a></i>
 					<br><br>
 
 					<b>Not the real types but used in the editor:</b>
@@ -262,7 +237,7 @@ keymap("n", '<leader>tf', '<cmd>tabnew %<CR>', {desc = "Open current buffer in a
 						<li>processeses</li>
 						<li>threads</li>
 					</ul>
-					<i>read here: <a href="https://www.gnu.org/software/emacs/manual/html_mono/elisp.html#Editing-Types/" class="text-zinc-200 hover:text-zinc-400">elisp/Editing-Types</a></i>
+					<i>read here: <a href="https://www.gnu.org/software/emacs/manual/html_mono/elisp.html#Editing-Types/" class="text-zinc-200 hover:underline">elisp/Editing-Types</a></i>
 					<br><br>
 
 					<b>Mentions:</b>
@@ -280,15 +255,15 @@ keymap("n", '<leader>tf', '<cmd>tabnew %<CR>', {desc = "Open current buffer in a
 									 text-zinc-400 bg-zinc-800">
 							Emacs Lisp
 						</span>
-						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(setq name "eto")
+						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq name "eto")
 ;; or
 (defvar name "eto"
    "Author's name.")</code></pre></div>
 
 					They can be used outside of the current scope.<br><br>
 
-						+ setq :: <a href="https://www.gnu.org/software/emacs/manual/html_node/eintr/Using-setq.html" class="text-zinc-300 hover:text-zinc-100">eintr/Using-setq</a><br>
-						+ defvar :: <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Defining-Variables.html" class="text-zinc-300 hover:text-zinc-100">elisp/Defining-Variables</a><br><br>
+						+ setq :: <a href="https://www.gnu.org/software/emacs/manual/html_node/eintr/Using-setq.html" class="text-zinc-300 hover:underline">eintr/Using-setq</a><br>
+						+ defvar :: <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Defining-Variables.html" class="text-zinc-300 hover:underline">elisp/Defining-Variables</a><br><br>
 
 						<hr class="max-w-4xl mx-auto border-zinc-900"><br>
 						<p class="text-lg font-bold">Local variables</p>
@@ -298,13 +273,13 @@ keymap("n", '<leader>tf', '<cmd>tabnew %<CR>', {desc = "Open current buffer in a
 										 text-zinc-400 bg-zinc-800">
 								Emacs Lisp
 							</span>
-							<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(let ((x 10)
+							<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(let ((x 10)
      (y 10))
 (+ x y))</code></pre></div>
 
 						Can only be called from the inside of the <b>(let)</b> block.<br><br>
 
-							+ let :: <a href="https://www.gnu.org/software/emacs/manual/html_node/eintr/let.html" class="text-zinc-300 hover:text-zinc-100">eintr/let</a><br>
+							+ let :: <a href="https://www.gnu.org/software/emacs/manual/html_node/eintr/let.html" class="text-zinc-300 hover:underline">eintr/let</a><br>
 							<br>
 							<hr class="max-w-4xl mx-auto border-zinc-900"><br>
 							<p class="text-lg font-bold">Functions</p>
@@ -314,7 +289,7 @@ keymap("n", '<leader>tf', '<cmd>tabnew %<CR>', {desc = "Open current buffer in a
 											 text-zinc-400 bg-zinc-800">
 									Emacs Lisp
 								</span>
-								<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(defun italian (name)
+								<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(defun italian (name)
 	"Greet in italian."
 	(message "Ciao, %s.", name))
 
@@ -322,9 +297,9 @@ keymap("n", '<leader>tf', '<cmd>tabnew %<CR>', {desc = "Open current buffer in a
 
 							Functions return the last expression.<br><br>
 
-								The first string is called a <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Defining-Functions.html" class="text-zinc-300 hover:text-zinc-100">docstring</a>, which can be used to define function's <b>purpose</b>.<br><br>
+								The first string is called a <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Defining-Functions.html" class="text-zinc-300 hover:underline">docstring</a>, which can be used to define function's <b>purpose</b>.<br><br>
 
-								+ defun :: <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Defining-Functions.html" class="text-zinc-300 hover:text-zinc-100">elisp/Defining-Functions</a><br><br>
+								+ defun :: <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Defining-Functions.html" class="text-zinc-300 hover:underline">elisp/Defining-Functions</a><br><br>
 
 								<hr class="max-w-4xl mx-auto border-zinc-900"><br>
 								<p class="text-lg font-bold">Lists</p>
@@ -361,7 +336,7 @@ keymap("n", '<leader>tf', '<cmd>tabnew %<CR>', {desc = "Open current buffer in a
 												 text-zinc-400 bg-zinc-800">
 										Emacs Lisp
 									</span>
-									<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(setq mlist '(1 2 3)) ;; define a list of three elements
+									<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq mlist '(1 2 3)) ;; define a list of three elements
 (B 3 4 "A") ;; a list of four elements
 () ;; empty list
 nil ;; empty list
@@ -374,7 +349,7 @@ nil ;; empty list
 												 text-zinc-400 bg-zinc-800">
 										Emacs Lisp
 									</span>
-									<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(car mlist) ;; the index element
+									<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(car mlist) ;; the index element
 (cdr mlist) ;; rest of the list after index
 (nth 'number mlist) ;; retuns the nth element
 (nthcdr 'number mlist) ;; returns the nth cdr of the list
@@ -394,7 +369,7 @@ nil ;; empty list
 								as a terminator of the list. Which is not required, but the list notation makes it easier to read.<br><br>
 
 								They can also be represented in such way:
-								<pre class="font-jetbrains code-block-fluid text-sm text-zinc-400 bg-zinc-800 overflow-x-auto my-6 leading-relaxed">
+								<pre class="font-iosevka code-block-fluid text-sm text-zinc-400 bg-zinc-800 overflow-x-auto my-6 leading-relaxed">
  	 --- ---      --- ---      --- ---
 	|   |   |--> |   |   |--> |   |   |--> nil
 	--- ---      --- ---      --- ---
@@ -407,9 +382,9 @@ nil ;; empty list
 												 text-zinc-400 bg-zinc-800">
 										Emacs Lisp
 									</span>
-									<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(1 . (2 . (3 . nil)))</code></pre></div>
+									<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(1 . (2 . (3 . nil)))</code></pre></div>
 
-								+ lists :: <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Lists.html" class="text-zinc-300 hover:text-zinc-100 transition-colors">elisp/Lists</a>
+								+ lists :: <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Lists.html" class="text-zinc-300 hover:underline transition-colors">elisp/Lists</a>
 									<br><br>
 									<hr class="max-w-4xl mx-auto border-zinc-900"><br>
 									<p class="text-lg font-bold">Lambda</p>
@@ -420,7 +395,7 @@ nil ;; empty list
 										\]
 									</div>
 									<br>
-									Reference: <a href="https://en.wikipedia.org/wiki/Bh%C4%81skara_I%27s_sine_approximation_formula#Equivalent_forms_of_the_formula" class="text-zinc-300 hover:text-zinc-100 transition-color">Bhāskara I's sine approximation formula</a><br>
+									Reference: <a href="https://en.wikipedia.org/wiki/Bh%C4%81skara_I%27s_sine_approximation_formula#Equivalent_forms_of_the_formula" class="text-zinc-300 hover:underline transition-color">Bhāskara I's sine approximation formula</a><br>
 
 									<div class="group relative my-5">
 										<span class="absolute -top-2.5 right-3 hidden group-hover:inline-block
@@ -428,7 +403,7 @@ nil ;; empty list
 													 text-zinc-400 bg-zinc-800">
 											Emacs Lisp
 										</span>
-										<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(lambda (x)
+										<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(lambda (x)
   "Calculate the sin of x using Bhaskara I’s Sine Approximation Formula."
   (/
     (* (* 16 x) (- 3.14 x))
@@ -436,8 +411,8 @@ nil ;; empty list
 
 									Lambda is an anonymous function object that takes a value for evaluation. We can dig deeper with this topic, but it is enough for now.<br><br>
 										<ol class="plus-list">
-											<li>lambda calculus :: <a href="https://en.wikipedia.org/wiki/Lambda_calculus" class="text-zinc-300 hover:text-zinc-100 transition-colors">wiki/Lambda_calculus</a></li>
-											<li>lambda expression :: <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Lambda-Expressions.html" class="text-zinc-300 hover:text-zinc-100 transition-colors">elisp/Lambda-Expressions</a></li>
+											<li>lambda calculus :: <a href="https://en.wikipedia.org/wiki/Lambda_calculus" class="text-zinc-300 hover:underline transition-colors">wiki/Lambda_calculus</a></li>
+											<li>lambda expression :: <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Lambda-Expressions.html" class="text-zinc-300 hover:underline transition-colors">elisp/Lambda-Expressions</a></li>
 										</ol>
 										<br>
 										<hr class="max-w-4xl mx-auto border-zinc-900"><br>
@@ -448,7 +423,7 @@ nil ;; empty list
 														 text-zinc-400 bg-zinc-800">
 												Emacs Lisp
 											</span>
-											<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(if (> 6 7)
+											<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(if (> 6 7)
   "6 is greater"
   "7 is greater")
 
@@ -469,7 +444,7 @@ nil ;; empty list
 ;; conditions with 'and' and 'or' logical operators
 (and (> 5 3) (< 10 20)) ;; both have to be true
 (or (> 5 10) (< 10 20)) ;; at least one should be true</code></pre></div>
-										+ control structures :: <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Control-Structures.html" class="text-zinc-300 hover:text-zinc-100 transition-colors">elisp/Control-Structures</a><br><br>
+										+ control structures :: <a href="https://www.gnu.org/software/emacs/manual/html_node/elisp/Control-Structures.html" class="text-zinc-300 hover:underline transition-colors">elisp/Control-Structures</a><br><br>
 
 											Looks like the basics are covered. Let's proceed with the configuration.
 											<br><br>
@@ -477,12 +452,12 @@ nil ;; empty list
 											<br>
 
 
-											<a href="#Chapter-3" class="text-lg text-zinc-300 font-bold hover:text-zinc-100 transition-colors" id="Chapter-3">Chapter 3: Configuration</a>
+											<a href="#Chapter-3" class="text-lg text-zinc-300 font-bold hover:underline transition-colors" id="Chapter-3">Chapter 3: Configuration</a>
 											<br><br>
 
 											Of course some simple things like syntax highlightning are expected of a modern
 											editor, but plain Emacs doesn't give you much.  Write your own theme if you want
-											to: <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Custom-Themes.html" class="text-zinc-300 hover:text-zinc-100 transition-colors">emacs/Custom-theme</a>. Simplest way would be <b>M-x customize-create-theme</b>.<br><br>
+											to: <a href="https://www.gnu.org/software/emacs/manual/html_node/emacs/Custom-Themes.html" class="text-zinc-300 hover:underline transition-colors">emacs/Custom-theme</a>. Simplest way would be <b>M-x customize-create-theme</b>.<br><br>
 
 											I rely on a number of tools everyday that simplify my life:
 											<ul class="plus-list">
@@ -493,11 +468,11 @@ nil ;; empty list
 											<br>
 											Emacs has many equivalents to each of these.
 											<ul class="plus-list">
-												<li><b>magit</b> :: <a href="https://github.com/magit/magit" class="text-zinc-200 hover:text-zinc-400 transition colors">magit/magit</a></li>
-												<li><b>org mode</b> :: <a href="https://orgmode.org/" class="text-zinc-200 hover:text-zinc-400 transition colors">orgmode.org</a></li>
-												<li><b>org-roam</b> :: <a href="https://www.orgroam.com/" class="text-zinc-200 hover:text-zinc-400 transition colors"> orgroam.com</a></li>
-												<li><b>org-roam-ui</b> :: <a href="https://github.com/org-roam/org-roam-ui" class="text-zinc-200 hover:text-zinc-400 transition colors">github.com/org-roam-ui</a></li>
-												<li><b>evil</b> :: <a href="https://github.com/emacs-evil/evil" class="text-zinc-200 hover:text-zinc-400 transition colors">emacs-evil/evil</a></li>
+												<li><b>magit</b> :: <a href="https://github.com/magit/magit" class="text-zinc-200 hover:underline transition colors">magit/magit</a></li>
+												<li><b>org mode</b> :: <a href="https://orgmode.org/" class="text-zinc-200 hover:underline transition colors">orgmode.org</a></li>
+												<li><b>org-roam</b> :: <a href="https://www.orgroam.com/" class="text-zinc-200 hover:underline transition colors"> orgroam.com</a></li>
+												<li><b>org-roam-ui</b> :: <a href="https://github.com/org-roam/org-roam-ui" class="text-zinc-200 hover:underline transition colors">github.com/org-roam-ui</a></li>
+												<li><b>evil</b> :: <a href="https://github.com/emacs-evil/evil" class="text-zinc-200 hover:underline transition colors">emacs-evil/evil</a></li>
 											</ul><br>
 
 											These are the plugins that have improved my productivity with everyday tasks
@@ -523,10 +498,10 @@ nil ;; empty list
 															 text-zinc-400 bg-zinc-800">
 													Emacs Lisp
 												</span>
-												<div class="font-jetbrains text-xs text-zinc-500 px-4 py-1.5 bg-zinc-800/60 border border-zinc-800 border-b-0">
+												<div class="font-iosevka text-xs text-zinc-500 px-4 py-1.5 bg-zinc-800/60 border border-zinc-800 border-b-0">
 													~/.emacs.d/init.el
 												</div>
-												<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(setq custom-file "~/.emacs.d/custom.el")
+												<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq custom-file "~/.emacs.d/custom.el")
 (load-file "~/.emacs.d/custom.el")
 
 (setq inhibit-startup-screen t)
@@ -593,7 +568,7 @@ nil ;; empty list
 															 text-zinc-400 bg-zinc-800">
 													Emacs Lisp
 												</span>
-												<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(setq backup-directory-alist `(("." . ,(concat user-emacs-directory "backups"))))</code></pre></div>
+												<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq backup-directory-alist `(("." . ,(concat user-emacs-directory "backups"))))</code></pre></div>
 
 											<hr class="max-w-4xl mx-auto border-zinc-900"><br>
 											<p class="text-lg font-bold">Default identation</p>
@@ -604,7 +579,7 @@ nil ;; empty list
 															 text-zinc-400 bg-zinc-800">
 													Emacs Lisp
 												</span>
-												<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(setq-default tab-width 4)
+												<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq-default tab-width 4)
 (setq-default indent-tabs-mode 4)
 (setq-default c-basic-offset 4)</code></pre></div>
 
@@ -618,7 +593,7 @@ nil ;; empty list
 															 text-zinc-400 bg-zinc-800">
 													Emacs Lisp
 												</span>
-												<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(require 'package)
+												<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(require 'package)
 (setq package-archives
   '(("melpa" . "https://melpa.org/packages/")
     ("nongnu" . "https://elpa.nongnu.org/nongnu/")
@@ -638,7 +613,7 @@ nil ;; empty list
 											Without having it configured one would need to have a lot of configurations done just to have a couple of packages
 											present in the configuration directory.<br><br>
 
-											You can think of it as <a href="https://www.lazyvim.org/" class="text-zinc-300 hover:text-zinc-100 transition-colors">lazy.nvim</a> of Emacs.<br>
+											You can think of it as <a href="https://www.lazyvim.org/" class="text-zinc-300 hover:underline transition-colors">lazy.nvim</a> of Emacs.<br>
 											<ol class="plus-list">
 												<li><b>melpa</b> :: repository built from upstream sources and managed by package.el</li>
 												<li><b>elpa.nongnu</b> :: archive of packages written in Emacs Lisp by NonGNU people for GNU Emacs</li>
@@ -653,14 +628,14 @@ nil ;; empty list
 											<hr class="max-w-4xl mx-auto border-zinc-900"><br>
 											<p class="text-lg font-bold">Theme</p><br>
 
-											I myself am a minimalistic person, so I did stick to <a href="https://github.com/christerso/emacs-voidlight-theme" class="text-zinc-300 hover:text-zinc-100 transition-colors">voidlight-theme</a> with <a href="https://www.jetbrains.com/lp/mono/" class="text-zinc-300 hover:text-zinc-100 transition-colors">JetBrains Mono</a>.<br>
+											I myself am a minimalistic person, so I did stick to <a href="https://github.com/christerso/emacs-voidlight-theme" class="text-zinc-300 hover:underline transition-colors">voidlight-theme</a> with <a href="https://www.jetbrains.com/lp/mono/" class="text-zinc-300 hover:underline transition-colors">JetBrains Mono</a>.<br>
 											<div class="group relative my-5">
 												<span class="absolute -top-2.5 right-3 hidden group-hover:inline-block
 															 px-2 py-0.5 text-[0.65rem] uppercase tracking-wide
 															 text-zinc-400 bg-zinc-800">
 													Emacs Lisp
 												</span>
-												<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(require 'voidlight-theme)</code></pre></div>
+												<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(require 'voidlight-theme)</code></pre></div>
 
 											<hr class="max-w-4xl mx-auto border-zinc-900"><br>
 											<p class="text-lg font-bold">Rust</p>
@@ -671,7 +646,7 @@ nil ;; empty list
 															 text-zinc-400 bg-zinc-800">
 													Emacs Lisp
 												</span>
-												<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(require 'rust-mode)
+												<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(require 'rust-mode)
 (defun sp1ff/rust/mode-hook ()
   "rust-mode hook."
   ;; Style per the Rust Style Guide:
@@ -695,7 +670,7 @@ nil ;; empty list
 
 											Evil mode is a bridge for Emacs that brings the VIM-motions into the editor.<br><br>
 
-											There is also <a href="https://www.gnu.org/software/emacs/manual/html_mono/viper.html" class="text-zinc-300 hover:text-zinc-100 transition-colors">Viper-mode</a> and <a href="https://github.com/emacsattic/vimpulse" class="text-zinc-300 hover:text-zinc-100 transition-colors">Vimpulse</a>. However, both are either outdated or lack functionality.<br>
+											There is also <a href="https://www.gnu.org/software/emacs/manual/html_mono/viper.html" class="text-zinc-300 hover:underline transition-colors">Viper-mode</a> and <a href="https://github.com/emacsattic/vimpulse" class="text-zinc-300 hover:underline transition-colors">Vimpulse</a>. However, both are either outdated or lack functionality.<br>
 											<b>Viper-mode</b> is a built-in VI emulation mode, while <b>Vimpulse</b> adds some advanced features to the Viper-mode.<br><br>
 
 											Evil mode is a complete emulation of the VIM motions.
@@ -706,7 +681,7 @@ nil ;; empty list
 															 text-zinc-400 bg-zinc-800">
 													Emacs Lisp
 												</span>
-												<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetrains">(setq evil-want-keybinding nil)
+												<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-underline">(setq evil-want-keybinding nil)
 (require 'evil)
 (evil-mode 1)
 (use-package evil-collection
@@ -735,17 +710,17 @@ nil ;; empty list
 															 text-zinc-400 bg-zinc-800">
 													Emacs Lisp
 												</span>
-												<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(use-package magit
+												<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(use-package magit
   :ensure t)</code></pre></div>
 
 											A repository can always be initialized using <b>C-x g</b>.<br><br>
 
-												All of its configuration can be found here: <a href="https://docs.magit.vc/magit/Variable-Index.html" class="text-zinc-300 hover:text-zinc-100 transition-colors">magit/Variable-Index</a>
+												All of its configuration can be found here: <a href="https://docs.magit.vc/magit/Variable-Index.html" class="text-zinc-300 hover:underline transition-colors">magit/Variable-Index</a>
 												<br><br>
 												<hr class="max-w-4xl mx-auto border-zinc-900"><br>
 												<p class="text-lg font-bold">Org mode</p><br>
 
-												In a modern world many people tend to use programs such as <a href="https://obsidian.md/" class="text-zinc-300 hover:text-zinc-100 transition-colors">Obsidian</a> to have their thoughts placed in one place.
+												In a modern world many people tend to use programs such as <a href="https://obsidian.md/" class="text-zinc-300 hover:underline transition-colors">Obsidian</a> to have their thoughts placed in one place.
 												And it is understandable, since these programs provide quite nice out-of-box functionality. However, if we want
 												to have everything together then we should also consider not using millions of programs to just write text files, right?<br><br>
 
@@ -754,7 +729,7 @@ nil ;; empty list
 												It is pre-installed since the Emacs 23, and so you should just configure it correctly.<br><br>
 
 												After setting it all up I would like to proceed to another plugin that is usually presented like holy-feature of Obsidian, but can be used in Emacs -
-												<a href="https://github.com/org-roam/org-roam-ui" class="text-zinc-300 hover:text-zinc-100 transition-colors">Org-roam-ui</a>, which is a frontend for <a href="https://www.orgroam.com/" class="text-zinc-300 hover:text-zinc-100 transition-colors">Org Roam</a> and Org mode and it depends on <a href="https://stable.melpa.org/#/websocket" class="text-zinc-300 hover:text-zinc-100 transition-colors">websocket</a>.<br><br>
+												<a href="https://github.com/org-roam/org-roam-ui" class="text-zinc-300 hover:underline transition-colors">Org-roam-ui</a>, which is a frontend for <a href="https://www.orgroam.com/" class="text-zinc-300 hover:underline transition-colors">Org Roam</a> and Org mode and it depends on <a href="https://stable.melpa.org/#/websocket" class="text-zinc-300 hover:underline transition-colors">websocket</a>.<br><br>
 
 												Switching to Org mode can be done by <b>M-x org-mode</b>.
 												<br><br>
@@ -768,7 +743,7 @@ nil ;; empty list
 																 text-zinc-400 bg-zinc-800">
 														Emacs Lisp
 													</span>
-													<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(setq org-agenda-files '("~/org/"))
+													<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(setq org-agenda-files '("~/org/"))
 (setq org-log-done 'time)
 
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
@@ -787,7 +762,7 @@ nil ;; empty list
 																 text-zinc-400 bg-zinc-800">
 														Emacs Lisp
 													</span>
-													<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(use-package org-roam-ui
+													<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(use-package org-roam-ui
   (:host github :repo "org-roam/org-roam-ui" :branch "main" :files ("*.el" "out"))
    :after org-roam
    :config
@@ -803,7 +778,7 @@ nil ;; empty list
 																 text-zinc-400 bg-zinc-800">
 														Emacs Lisp
 													</span>
-													<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">:hook (after-init . org-roam-ui-mode)</code></pre></div>
+													<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">:hook (after-init . org-roam-ui-mode)</code></pre></div>
 
 												Then to explore, run <b>M-x org-mode-ui-mode</b>, and visit <b>localhost:35901</b> in your
 													browser.
@@ -817,14 +792,14 @@ nil ;; empty list
 																	 text-zinc-400 bg-zinc-800">
 															Emacs Lisp
 														</span>
-														<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-jetbrains">(use-package dired-open
+														<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-sm"><code class="language-elisp font-iosevka">(use-package dired-open
   :config
   (setq dired-open-extensions '(("pdf" . "zathura")
                                 ("mkv" . "mpv"))))</code></pre></div>
 
 													<hr class="max-w-4xl mx-auto border-zinc-800">
 													<br>
-													<a href="#Afterword" class="text-lg font-bold hover:text-zinc-400 text-zinc-300 transition-colors" id="Afterword">Afterword</a>
+													<a href="#Afterword" class="text-lg font-bold hover:underline text-zinc-300 transition-colors" id="Afterword">Afterword</a>
 													<br><br>
 
 													Emacs is not just a text editor. Emacs is an OS inside of an OS. You can do
@@ -832,83 +807,87 @@ nil ;; empty list
 													learning functional languages way before trying out Emacs. However, it was
 													Clojure and tiredness of Lua that made me consider switching.<br><br>
 
-													I suggest the reader to start learning languages such as <a href="https://www.haskell.org/" class="text-zinc-300 hover:text-zinc-100 transition-colors">Haskell</a>, <a href="https://lisp-lang.org/" class="text-zinc-300 hover:text-zinc-100 transition-colors">Common Lisp</a>,	<a href="https://www.scheme.org/" class="text-zinc-300 hover:text-zinc-100 transition-colors">Scheme</a> or anything in between. There is also the branch of mathematics called <a href="https://en.wikipedia.org/wiki/Lambda_calculus" class="text-zinc-300 hover:text-zinc-100 transition-colors">Lambda Calculus</a> for those who are interested in the math side of things.<br><br>
+													I suggest the reader to start learning languages such as <a href="https://www.haskell.org/" class="text-zinc-300 hover:underline transition-colors">Haskell</a>, <a href="https://lisp-lang.org/" class="text-zinc-300 hover:underline transition-colors">Common Lisp</a>,	<a href="https://www.scheme.org/" class="text-zinc-300 hover:underline transition-colors">Scheme</a> or anything in between. There is also the branch of mathematics called <a href="https://en.wikipedia.org/wiki/Lambda_calculus" class="text-zinc-300 hover:underline transition-colors">Lambda Calculus</a> for those who are interested in the math side of things.<br><br>
 
 													Emacs doesn't stop you from anything. Become the god of the editor.<br>
 
 													<blockquote class="p-4 my-4 border-s-4 border-default bg-neutral-secondary-soft">
-														Dream bigger, it would do you well.<br>
-														- tenketokt
+													  <p class="italic leading-relaxed text-heading">
+														<q>Dream bigger, it would do you well.</q>
+													  </p>
+													  <p class="flex justify-end italic">
+														tenketokt
+													  </p>
 													</blockquote>
 
 													<hr class="max-w-4xl mx-auto border-zinc-800">
 													<br>
 
-													<a href="#References" class="text-lg font-bold hover:text-zinc-400 text-zinc-300 transition-colors" id="References">References</a>
+													<a href="#References" class="text-lg font-bold hover:underline text-zinc-300 transition-colors" id="References">References</a>
 													<br><br>
 													<ol class="numbered-list flex flex-col gap-2">
 														<li>
-															<a href="https://en.wikipedia.org/wiki/Lambda_calculus" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">Lambda Calculus</a>
+															<a href="https://en.wikipedia.org/wiki/Lambda_calculus" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">Lambda Calculus</a>
 														</li>
 														<li>
-															<a href="https://x.com/Jonathan_Blow" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">Jonathan Blow</a>
+															<a href="https://x.com/Jonathan_Blow" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">Jonathan Blow</a>
 														</li>
 														<li>
-															<a href="https://tsoding.github.io/" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">Tsoding</a>
+															<a href="https://tsoding.github.io/" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">Tsoding</a>
 														</li>
 														<li>
-															<a href="https://www.youtube.com/@valigotech" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">Valentin Ignatiev</a>
+															<a href="https://www.youtube.com/@valigotech" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">Valentin Ignatiev</a>
 														</li>
 														<li>
-															<a href="https://github.com/ThePrimeagen" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">ThePrimeagen</a>
+															<a href="https://github.com/ThePrimeagen" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">ThePrimeagen</a>
 														</li>
 														<li>
-															<a href="https://www.youtube.com/c/DistroTube/videos" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">DistroTube</a>
+															<a href="https://www.youtube.com/c/DistroTube/videos" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">DistroTube</a>
 														</li>
 														<li>
-															<a href="https://archlinux.org/" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">Arch Linux</a>
+															<a href="https://archlinux.org/" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">Arch Linux</a>
 														</li>
 														<li>
-															<a href="https://en.wikipedia.org/wiki/Free_Software%2C_Free_Society" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">Free Software, Free Society: Selected Essays of Richard M. Stallman</a>
+															<a href="https://en.wikipedia.org/wiki/Free_Software%2C_Free_Society" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">Free Software, Free Society: Selected Essays of Richard M. Stallman</a>
 														</li>
 														<li>
-															<a href="https://github.com/cloudstreet-dev/Elisp-Tutorial/blob/main/elisp-tutorial.el" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">Emacs Lisp Tutorial</a>
+															<a href="https://github.com/cloudstreet-dev/Elisp-Tutorial/blob/main/elisp-tutorial.el" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">Emacs Lisp Tutorial</a>
 														</li>
 														<li>
-															<a href="http://xahlee.info/emacs/emacs/practical_elisp.html" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">Xah Less, "Practical Emacs Lisp"</a>
+															<a href="http://xahlee.info/emacs/emacs/practical_elisp.html" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">Xah Less, "Practical Emacs Lisp"</a>
 														</li>
 														<li>
-															<a href="https://youtu.be/81mdydyqb-a?si=czw12b00v7enxbyw" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">Tsoding: Configuring Emacs on My New Laptop</a>
+															<a href="https://youtu.be/81mdydyqb-a?si=czw12b00v7enxbyw" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">Tsoding: Configuring Emacs on My New Laptop</a>
 														</li>
 														<li>
-															<a href="https://youtu.be/inkv9ofWl38?si=Vm7DFucQrmNx9_Xk" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">tenketokt: MIT Mad-Prophet Predicts the Future in 1980</a>
+															<a href="https://youtu.be/inkv9ofWl38?si=Vm7DFucQrmNx9_Xk" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">tenketokt: MIT Mad-Prophet Predicts the Future in 1980</a>
 														</li>
 														<li>
-															<a href="http://gnu.org/software/emacs/manual/html_mono/eintr.html" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">GNU: ELisp Manual</a>
+															<a href="http://gnu.org/software/emacs/manual/html_mono/eintr.html" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">GNU: ELisp Manual</a>
 														</li>
 														<li>
-															<a href="https://pwmt.org/projects/zathura/" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">Zathura</a>
+															<a href="https://pwmt.org/projects/zathura/" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">Zathura</a>
 														</li>
 														<li>
-															<a href="https://mpv.io/" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">MPV</a>
+															<a href="https://mpv.io/" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">MPV</a>
 														</li>
 														<li>
-															<a href="https://emacs.dyerdwelling.family/emacs/20260518114325-emacs--vc-mode-meets-magit-or-why-i-finally-gave-in/" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">VC-Mode Meets Magit - or Why I Finally Gave In!</a>
+															<a href="https://emacs.dyerdwelling.family/emacs/20260518114325-emacs--vc-mode-meets-magit-or-why-i-finally-gave-in/" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">VC-Mode Meets Magit - or Why I Finally Gave In!</a>
 														</li>
 														<li>
-															<a href="https://github.com/emacsattic/vimpulse" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">vimpulse</a>
+															<a href="https://github.com/emacsattic/vimpulse" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">vimpulse</a>
 														</li>
 														<li>
-															<a href="https://www.gnu.org/software/emacs/manual/html_mono/viper.html" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">Viper</a>
+															<a href="https://www.gnu.org/software/emacs/manual/html_mono/viper.html" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">Viper</a>
 														</li>
 														<li>
-															<a href="https://doc.rust-lang.org/stable/book/" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">The Rust Programming Language</a>
+															<a href="https://doc.rust-lang.org/stable/book/" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">The Rust Programming Language</a>
 														</li>
 														<li>
-															<a href="https://www.lazyvim.org/" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">lazyvim</a>
+															<a href="https://www.lazyvim.org/" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">lazyvim</a>
 														</li>
 														<li>
-															<a href="https://cs.brown.edu/courses/cs173/2008/Manual/guide/pairs.html" class="text-zinc-400 hover:text-zinc-100 transition-colors underline" target="_blank" rel="noopener noreferrer">Scheme. Pairs and Lists</a>
+															<a href="https://cs.brown.edu/courses/cs173/2008/Manual/guide/pairs.html" class="text-zinc-400 hover:underline transition-colors" target="_blank" rel="noopener noreferrer">Scheme. Pairs and Lists</a>
 														</li>
 													</ol>
 

@@ -10,47 +10,23 @@
   </head>
   <body class="bg-zinc-950 text-zinc-400 min-h-screen flex flex-col text-lg md:text-base">
 	<div class="flex flex-1">
-	  <!--i hate css-->
-
-<button
-  onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full')"
-  class="md:hidden fixed top-11 right-0 z-50 p-2 bg-zinc-950 border border-zinc-800 text-zinc-100">
-  <i class="ti ti-menu-2 text-2xl"></i>
-</button>
-
-<aside id="sidebar" class="
-  fixed md:sticky top-0 z-40
-  w-64 h-screen p-4 flex flex-col gap-1 overflow-y-auto
-  border-r border-zinc-800 bg-zinc-950
-  -translate-x-full md:translate-x-0
-  transition-transform duration-200
-">
-  <ul class="flex flex-col gap-1 plus-list">
-	<li>
-	  <a href="/blog.html" class="text-zinc-300 hover:text-zinc-100 transition-colors">blog</a>
-	</li>
-  </ul>
-
-  <ul class="flex flex-col plus-list gap-1">
-	<li>
-	  <a href="/projects.html" class="text-zinc-300 hover:text-zinc-100 transition-colors">projects</a>
-	</li>
-  </ul>
-
-</aside>
-
 	  <div class="flex-1 flex flex-col">
-		<div class="flex justify-center sticky top-0 z-20">
-		  <nav class="flex items-center justify-between border-l border-r border-b border-zinc-800 gap-1 w-full max-w-4xl bg-zinc-950">
-  <a href="/" class="px-2 md:px-4 py-2 md:py-4 text-lg font-bold text-zinc-100 hover:text-zinc-400 transition-colors">
-    /home/eto/
-  </a>
-  <a href="mailto:batistaq@proton.me" class="px-2 md:px-4 py-2 md:py-4 text-right text-zinc-400 hover:text-zinc-100 italic transition-colors">
-    batistaq@proton.me
-  </a>
-</nav>
+		<div class="flex justify-center top-0 z-20">
+  <nav class="flex justify-center">
+	<ul class="menu">
+	  <li>
+		<a href="/index.html" class="font-bold text-lg hover:underline">Home</a>
+	  </li>
+	  <li>
+		<a href="/blog.html" class="font-bold text-lg hover:underline">Blog</a>
+	  </li>
+	  <li>
+		<a href="/projects.html" class="font-bold text-lg hover:underline">Projects</a>
+	  </li>
+	</ul>
+  </nav>
+</div>
 
-		</div>
 		<div class="flex-1 flex flex-col items-center justify-center text-center px-4">
 		  Hey! The page you just searched seems to not be existent. <br>
 		  Check the URL, I guess. :// 

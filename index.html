@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>eto: Front page</title>
+		<title>Front page | eto</title>
 		<meta name="author" content="eto, batistaq@proton.me">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="icon" type="image/x-icon" href="/static/favicon.ico">
@@ -12,136 +12,109 @@
 	</head>
 	<body class="bg-zinc-950 text-zinc-100 min-h-screen flex flex-col text-base">
 		<div class="flex flex-1">
-
-			<!--i hate css-->
-
-<button
-  onclick="document.getElementById('sidebar').classList.toggle('-translate-x-full')"
-  class="md:hidden fixed top-11 right-0 z-50 p-2 bg-zinc-950 border border-zinc-800 text-zinc-100">
-  <i class="ti ti-menu-2 text-2xl"></i>
-</button>
-
-<aside id="sidebar" class="
-  fixed md:sticky top-0 z-40
-  w-64 h-screen p-4 flex flex-col gap-1 overflow-y-auto
-  border-r border-zinc-800 bg-zinc-950
-  -translate-x-full md:translate-x-0
-  transition-transform duration-200
-">
-  <ul class="flex flex-col gap-1 plus-list">
-	<li>
-	  <a href="/blog.html" class="text-zinc-300 hover:text-zinc-100 transition-colors">blog</a>
-	</li>
-  </ul>
-
-  <ul class="flex flex-col plus-list gap-1">
-	<li>
-	  <a href="/projects.html" class="text-zinc-300 hover:text-zinc-100 transition-colors">projects</a>
-	</li>
-  </ul>
-
-</aside>
-
-
-			<div class="flex-1 flex flex-col">
+			<div class="flex-1 flex flex-col min-w-0">
 				
-				<div class="flex justify-center sticky top-0 z-20 bg-zinc-950">
-					<nav class="flex items-center justify-between border-l border-r border-b border-zinc-800 gap-1 w-full max-w-4xl bg-zinc-950">
-  <a href="/" class="px-2 md:px-4 py-2 md:py-4 text-lg font-bold text-zinc-100 hover:text-zinc-400 transition-colors">
-    /home/eto/
-  </a>
-  <a href="mailto:batistaq@proton.me" class="px-2 md:px-4 py-2 md:py-4 text-right text-zinc-400 hover:text-zinc-100 italic transition-colors">
-    batistaq@proton.me
-  </a>
-</nav>
+				<div class="flex justify-center top-0 z-20">
+  <nav class="flex justify-center">
+	<ul class="menu">
+	  <li>
+		<a href="/index.html" class="font-bold text-lg hover:underline">Home</a>
+	  </li>
+	  <li>
+		<a href="/blog.html" class="font-bold text-lg hover:underline">Blog</a>
+	  </li>
+	  <li>
+		<a href="/projects.html" class="font-bold text-lg hover:underline">Projects</a>
+	  </li>
+	</ul>
+  </nav>
+</div>
 
-				</div>
-				
-				<main class="p-8 max-w-4xl mx-auto px-4 py-8">
-					<h1 class="text-2xl md:text-3xl font-bold mb-4">Welcome!</h1>
-					<p class="text-zinc-400 py-4 md:py-6">
-						I'm <b class="underline">eto</b> (he/they)! Mainly a <u>paranoid programmer</u>, secondly an inspiring <u>systems administrator</u>. However, I am better known as someone with way too many interests. :3<br><br>
-						<b>Graphics Programming</b>, <b>Maths</b>, <b>Cyber Security</b>, <b>Operating Systems</b>, <b>Music</b> and a lot more. I do whatever I find interesting. I participate in whatever I like. And tend to talk to people I find smarter than myself. 
-						<br><br>
-						This website has just been recently created. And so it will grow over time, its structure won't be consistent, it may break, or it will just work. Who knows?
-						<br>
+
+				<main class="flex-1 max-w-4xl mx-auto px-5 py-8 w-full">
+					<p class="text-zinc-200 py-4 md:py-6">
+					  I'm <b>eto</b> (he/they)! Mainly a <b>paranoid programmer</b>, secondly an inspiring <b>systems administrator</b>. However, I am better known as someone with way too many interests. :3<br><br>
+					  <b>Graphics Programming</b>, <b>Maths</b>, <b>Cybersecurity</b>, <b>Operating Systems</b>, <b>Music</b> and a lot more. I do whatever I find interesting. I participate in whatever I like. And tend to talk to people I find smarter than myself. 
+					  <br>
 					</p>
+					<!-- <div class="my-4 overflow-hidden">
+						<div class="flex items-center justify-center gap-4 pr-4">
+							<a href="https://gnu.org" target="_blank" rel="noopener noreferrer">
+								<img src="/static/badges/gnubanner.gif" alt="GNU">
+							</a>
+							<a href="https://kernel.org" target="_blank" rel="noopener noreferrer">
+								<img src="/static/badges/gnu-linux.gif" alt="GET LINUX">
+							</a>
+							<a href="" target="_blank" rel="noopener noreferrer">
+								<img src="/static/badges/eto.gif" alt="me">
+							</a>
+							<a href="https://archlinux.org" target="_blank" rel="noopener noreferrer">
+								<img src="/static/badges/arch.gif" alt="arch linux">
+							</a>
+						</div>
+					</div>-->
+
+					<hr class="max-w-4xl mx-auto border-zinc-800"><br>
+					<p class="text-zinc-100 text-xl p-1">Contact Info</p><br>
+					<ul>
+					  <li>
+						<span class="text-zinc-200">Email: <a href="mailto:batistaq@proton.me" class="text-zinc-400 hover:underline transition-colors">batista [at] proton [dot] me</a></span>
+					  </li>
+					  <li>
+						<span class="text-zinc-200">GitHub: <a href="https://github.com/Krak9n" class="hover:underline text-zinc-400 transition-colors">github.com/Krak9n</a></span>
+					  </li>
+					  <li>
+						<span class="text-zinc-200">x dot com: <a href="https://x.com/mhmrth1" class="text-zinc-400 hover:underline transition-colors">x.com/mhmrth1</a></span>
+					  </li>
+					  <li>
+						<span class="text-zinc-200">YouTube: <a href="https://www.youtube.com/@eto-ql" class="text-zinc-400 hover:underline transition-colors">youtube.com/eto-ql</a></span>
+					  </li>
+					</ul>
+
+					<br>
+					<p>If you wish to support me, use this Monero address. And don't trust anyone, run nodes yourself!</p>
+					<div class="group relative my-5">
+						<pre class="code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-xs md:text-sm"><code class="font-iosevka">4A94BJdwvcRQMaRcuC4zFJ1K4dgDrk8U1HWjSVCdsao1hvmv97C5LqF5ZdLnHdHaJoFCrSEmPbGYRHZTJJxrMQv93FVDSsf</code></pre></div>
+					<hr class="max-w-4xl mx-auto border-zinc-800"><br>
 
 					<!--flag{not_quite_it}-->
+					<p>The following quote summarises cherishing the knowledge we have already acquired with such precision that it is difficult to find a better way of explaining it. <q>To know is to value.</q> – Me</p>
 					<blockquote class="p-4 my-4 border-s-4 border-default bg-neutral-secondary-soft">
-						<p class="italic leading-relaxed text-heading">An "intellectual" is not really a thing, knowing a lot about a lot is not a personality. The pursuit of knowledge is great but making it your entire identity is a recipe for failure. You'll spend your life always chasing new knowledge and never appreciate the knowledge you have.
+						<p class="italic leading-relaxed text-heading"><q>An "intellectual" is not really a thing, knowing a lot about a lot is not a personality. The pursuit of knowledge is great but making it your entire identity is a recipe for failure. You'll spend your life always chasing new knowledge and never appreciate the knowledge you have.</q>
 						</p>
 						<p class="flex justify-end italic">
-							<a href="https://www.reddit.com/user/JustABureaucrat/" class="text-zinc-100 hover:text-zinc-400 transition-colors">
-								<u>JustABureaucrat</u>
+							<a href="https://www.reddit.com/user/JustABureaucrat/" class="text-zinc-100 hover:underline transition-colors">
+								JustABureaucrat
 							</a>
 						</p>
-					</blockquote>
+					</blockquote><br>
 
-					<div class="flex gap-5 mt-4 justify-center">
-						<ul class="flex flex-wrap text-center items-center gap-y-2 gap-x-8">
-							<li>
-								<a href="https://github.com/Krak9n" class="flex items-center gap-1.5 text-zinc-400 hover:text-zinc-100 transition-colors">
-									<b><u>github</u></b>
-								</a>
-							</li>
-							<li>
-								<a href="/rss.xml" class="flex items-center gap-1.5 text-zinc-400 hover:text-zinc-100 transition-colors" rel="noopener noreferrer">
-									<b><u>rss</u></b>
-								</a>
-							</li>
-							<li>
-								<a href="https://x.com/mhmrth1" class="flex items-center gap-1.5 text-zinc-400 hover:text-zinc-100 transition-colors">
-									<b><u>x.com</u></b>
-								</a>
-							</li>
-						</ul>
-					</div>
-				
-					<div class="mx-auto px-4">
-						<div class="marquee my-4 overflow-hidden">
-							<div class="marquee-group flex items-center justify-center gap-4 pr-4">
-								<a href="https://gnu.org" target="_blank" rel="noopener noreferrer">
-									<img src="/static/badges/gnubanner.gif" alt="GNU">
-								</a>
-								<a href="https://kernel.org" target="_blank" rel="noopener noreferrer">
-									<img src="/static/badges/gnu-linux.gif" alt="GET LINUX">
-								</a>
-								<a href="" target="_blank" rel="noopener noreferrer">
-									<img src="/static/badges/eto.gif" alt="me">
-								</a>
-								<a href="https://archlinux.org" target="_blank" rel="noopener noreferrer">
-									<img src="/static/badges/arch.gif" alt="arch linux">
-								</a>
-							</div>
-						</div>
-
-					</div>
 					<hr class="max-w-4xl mx-auto border-zinc-800"><br>
 					
 					<div class="max-w-4xl mx-auto px-4 md:mt-4">
 						<img src="/static/imgs/kaneki1.png" class="border border-zinc-150" alt="privacy over anything">
 						<br>
 					</div>
-					<p class="justify-end text-zinc-400">~ This is an excerpt from one of my favourite books, <a href="https://inteltechniques.com/book7.html" class="text-zinc-100 hover:text-zinc-400 transition-colors">Extreme Privacy: What It Takes to Disappear.</a> This book will teach more about life than anything else.</p>
+					<p class="justify-end text-zinc-400">~ This is an excerpt from one of my favourite books, <a href="https://inteltechniques.com/book7.html" class="text-zinc-100 hover:underline transition-colors">Extreme Privacy: What It Takes to Disappear.</a> This book will teach more about life than anything else.</p>
 					
 					<br>
 
 					<hr class="max-w-4xl mx-auto border-zinc-800"><br>
-					<h1 class="flex">Recent Projects</h1>
+
+					<p class="text-zinc-100 text-xl p-1">Recent Projects</p>
 					<div class="max-w-4xl mx-auto px-4 md:mt-4">
 						<ul class="plus-list">
 							<li>
-								<span><a href="https://github.com/Krak9n/ranni" class="text-zinc-100 hover:text-zinc-400 transition-colors mt-2">ranni</a>: <span class="text-zinc-400">image to ascii tool.</span></span>
+								<span><a href="https://github.com/Krak9n/ranni" class="text-zinc-100 hover:underline transition-colors mt-2">ranni</a>: <span class="text-zinc-400">image to ascii tool.</span></span>
 							</li>
 							<li>
-								<span><a href="https://github.com/Krak9n/soltaire-ascii" class="text-zinc-100 hover:text-zinc-400 transition-colors mt-2">soltaire</a>: <span class="text-zinc-400">terminal-based ascii card game.</span></span>
+								<span><a href="https://github.com/Krak9n/soltaire-ascii" class="text-zinc-100 hover:underline transition-colors mt-2">soltaire</a>: <span class="text-zinc-400">terminal-based ascii card game.</span></span>
 							</li>
 							<li>
-								<span><a href="https://github.com/Krak9n/unchained" class="text-zinc-100 hover:text-zinc-400 transition-colors mt-2">unchained</a>: <span class="text-zinc-400">[wip] game of life from scratch.</span></span>
+								<span><a href="https://github.com/Krak9n/unchained" class="text-zinc-100 hover:underline transition-colors mt-2">unchained</a>: <span class="text-zinc-400">[wip] game of life from scratch.</span></span>
 							</li>
 							<li>
-								<span><a href="https://github.com/Krak9n/cantor" class="text-zinc-100 hover:text-zinc-400 transition-colors mt-2">cantor</a>: <span class="text-zinc-400">[wip] minimalistic status bar for wayland.</span></span>
+								<span><a href="https://github.com/Krak9n/cantor" class="text-zinc-100 hover:underline transition-colors mt-2">cantor</a>: <span class="text-zinc-400">[wip] minimalistic status bar for wayland.</span></span>
 							</li>
 						</ul>
 					</div>
@@ -149,26 +122,18 @@
 					
 					<hr class="max-w-4xl mx-auto border-zinc-800">
 					<br>
-					<h1 class="flex">Latest Posts</h1>
+					<p class="text-zinc-100 text-xl p-1">Latest Posts</p>
 					<div class="max-w-4xl mx-auto px-4 mt-4 md:mt-4">
 						<span class="text-zinc-500">2026.08.07:</span>
-						<a href="/blog/emacs-for-nvchads.html" class="text-center text-zinc-100 hover:text-zinc-400 transition-colors font-semibold">
+						<a href="/blog/emacs-for-nvchads.html" class="text-center text-zinc-100 hover:underline transition-colors">
 							Emacs for NvChads
 						</a>
 						<br>
 						<span class="text-zinc-500">2026.07.29:</span>
-						<a href="/blog/extreme-privacy.html" class="text-center text-zinc-100 hover:text-zinc-400 transition-colors font-semibold">
+						<a href="/blog/extreme-privacy.html" class="text-center text-zinc-100 hover:underline transition-colors">
 							Extreme Privacy, or stay like everyone else?
 						</a>
 					</div><br>
-
-					<hr class="max-w-4xl mx-auto border-zinc-800"><br>
-
-					<p>If you wish to support me, here's the Monero address!</p>
-					<div class="mx-auto px-4">
-					  <div class="group relative my-5">
-						<pre class="overflow-auto code-block-fluid border border-zinc-800 bg-zinc-800 p-4 text-xs md:text-sm"><code class="font-jetbrains">4A94BJdwvcRQMaRcuC4zFJ1K4dgDrk8U1HWjSVCdsao1hvmv97C5LqF5ZdLnHdHaJoFCrSEmPbGYRHZTJJxrMQv93FVDSsf</code></pre></div>
-					</div>
 	
 				</main>
 				<div class="text-base">
