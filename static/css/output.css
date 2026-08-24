@@ -584,6 +584,13 @@ body {
   content: counter(ref-counter) ". ";
   color: var(--color-zinc-500, #71717a);
 }
+.references-list li {
+  counter-increment: ref-counter;
+}
+.references-list li::before {
+  content: "["counter(ref-counter) "] ";
+  color: var(--color-zinc-500, #71717a);
+}
 .plus-list {
   list-style: none;
   padding: 0;
