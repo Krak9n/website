@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-600: oklch(57.7% 0.245 27.325);
     --color-zinc-100: oklch(96.7% 0.001 286.375);
     --color-zinc-200: oklch(92% 0.004 286.32);
     --color-zinc-300: oklch(87.1% 0.006 286.286);
@@ -31,6 +32,8 @@
     --text-xl--line-height: calc(1.75 / 1.25);
     --text-2xl: 1.5rem;
     --text-2xl--line-height: calc(2 / 1.5);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-bold: 700;
     --tracking-wide: 0.025em;
     --leading-relaxed: 1.625;
@@ -39,6 +42,7 @@
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-iosevka: "Iosevka", sans-serif;
+    --font-libertinus-math: "Libertinus Math", monospace;
   }
 }
 @layer base {
@@ -241,14 +245,14 @@
   .my-6 {
     margin-block: calc(var(--spacing) * 6);
   }
-  .mt-2 {
-    margin-top: calc(var(--spacing) * 2);
-  }
   .mt-4 {
     margin-top: calc(var(--spacing) * 4);
   }
   .flex {
     display: flex;
+  }
+  .grid {
+    display: grid;
   }
   .hidden {
     display: none;
@@ -287,6 +291,15 @@
   .list-disc {
     list-style-type: disc;
   }
+  .grid-flow-row {
+    grid-auto-flow: row;
+  }
+  .auto-rows-max {
+    grid-auto-rows: max-content;
+  }
+  .grid-cols-\[1fr_auto_1fr\] {
+    grid-template-columns: 1fr auto 1fr;
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -304,6 +317,18 @@
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .justify-self-center {
+    justify-self: center;
+  }
+  .justify-self-end {
+    justify-self: flex-end;
+  }
+  .justify-self-start {
+    justify-self: flex-start;
   }
   .overflow-auto {
     overflow: auto;
@@ -357,6 +382,9 @@
   .p-2 {
     padding: calc(var(--spacing) * 2);
   }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
@@ -396,9 +424,16 @@
   .font-iosevka {
     font-family: var(--font-iosevka);
   }
+  .font-libertinus-math {
+    font-family: var(--font-libertinus-math);
+  }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
   .text-base {
     font-size: var(--text-base);
@@ -437,6 +472,9 @@
   .tracking-wide {
     --tw-tracking: var(--tracking-wide);
     letter-spacing: var(--tracking-wide);
+  }
+  .text-red-600 {
+    color: var(--color-red-600);
   }
   .text-zinc-100 {
     color: var(--color-zinc-100);
@@ -565,9 +603,9 @@
   src: url('/static/files/fonts/Iosevka-Regular.ttf') format('truetype');
 }
 @font-face {
-  font-family: Iosevka;
+  font-family: Libertinus Math;
   font-weight: normal;
-  src: url('/static/files/fonts/Iosevka-Regular.ttf') format('truetype');
+  src: url('/static/files/fonts/LibertinusMath-Regular.ttf') format('truetype');
 }
 body {
   font-family: 'Iosevka', monospace;
@@ -608,7 +646,6 @@ pre[class*="language-"], code[class*="language-"] {
   padding: clamp(0.5rem, 3vw, 1rem);
 }
 .menu {
-  margin: 1em 0 0 0;
   padding: 0;
 }
 .menu li {
@@ -617,7 +654,6 @@ pre[class*="language-"], code[class*="language-"] {
   color: #ccc;
 }
 .menu li:not(:first-child):before {
-  padding: 0.5em;
   content: " | ";
   color: #ccc;
 }
