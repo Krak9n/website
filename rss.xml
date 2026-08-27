@@ -1,0 +1,26 @@
+<rss version="2.0">
+  <channel>
+	<title>eto</title>
+	<link>https://qlain.online/</link>
+	<description>Personal website</description>
+	<language>en-us</language>
+	<item>
+	  <title>Blog</title>
+	  <link>https://qlain.online/blog.html</link>
+	  <pubDate>Sun, 09 Aug 2026 00:00:00 GMT</pubDate>
+	  <description>Summary of the blog section.</description>
+	</item>
+	<item>
+	  <title>Emacs for NvChads</title>
+	  <link>https://qlain.online/blog/emacs-for-nvchads</link>
+	  <pubDate>Fri, 07 Aug 2026 00:00:00 GMT</pubDate>
+	  <description>Emacs is not just a text editor. Emacs is an OS inside of an OS. You can do everything with it once you start digging below the surface. Emacs doesn't stop you from anything. Become the god of the editor.</description>
+	</item>
+	<item>
+	  <title>Extreme Privacy, or stay like everyone else?</title>
+	  <link>https://qlain.online/blog/extreme-privacy</link>
+	  <pubDate>Wed, 29 Jul 2026 00:00:00 GMT</pubDate>
+	  <description>One should have a way to express oneself, even if it is wrong or incorrect to someone else. Every opinion SHOULD have a place to exist. Only in such a manner can we, as a society, continue to develop. No politician should dictate people's life, and no person should be arrested, or blacklisted for saying something that those in power do not understand or do not like.</description>
+	</item>
+  </channel>
+</rss>

@@ -1,0 +1,5 @@
+/node_modules
+package.json
+package-lock.json
+astro.config.mjs
+rss.xml.js
